@@ -1,0 +1,953 @@
+@import 'fonts'
+@import 'media'
+@import 'vars'
+
+*::-webkit-input-placeholder
+  color: #aeaeae
+  opacity: 1
+
+*:-moz-placeholder
+  color: #aeaeae
+  opacity: 1
+
+*::-moz-placeholder
+  color: #aeaeae
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #aeaeae
+  opacity: 1
+
+* 
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -o-box-sizing: border-box
+  &:focus
+    outline: 0 !important
+
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+img 
+  border-style: none
+
+h1, h2, h3, h4, h5, h6, p, figure, li
+  margin: 0
+
+img
+  border-style: none
+  display: block
+
+input, select, textarea 
+  vertical-align: middle
+  font: 100% arial, helvetica, sans-serif
+
+a 
+  text-decoration: none
+
+a:hover, a:active, a:focus
+  text-decoration: none
+
+button, button:hover, button:active, button:focus
+  outline: 0 !important
+
+.btn:hover, .btn:active, .btn:focus
+  color: #fff
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: rgba(0,0,0,.25)
+  border-color: rgba(0,0,0,.25)
+
+html,
+body
+  height: 100%
+
+html
+	font-size: 10px
+	@include xl
+		font-size: 8px
+	@include lg
+		font-size: 10px
+
+body
+  font-size: 1.6rem
+  min-width: 320px
+  background-color: #f0f0f0
+  position: relative
+  line-height: 1.33
+  font-family: $default-font
+  color: $text-color
+  overflow-x: hidden
+  opacity: 1
+
+/* General reset end */
+.logo
+	display: block
+	margin-top: -2rem
+	svg
+		width: 100%
+		max-height: 10rem
+	img
+		width: 100%
+		height: auto
+	@include lg
+		max-width: 15rem
+		margin: 0 auto
+
+.btn-language
+	display: inline-block
+	color: $text-color
+	border-bottom: 0.1rem solid #d3d3d3
+	img
+		display: inline-block
+	span
+		color: #838383
+		display: inline-block
+		font-size: 1.4rem
+		line-height: 1
+
+.header-top_right
+	display: flex
+	align-items: stretch
+	flex-direction: row
+	@include lg
+		justify-content: flex-end
+
+.search-hold
+  position: relative
+
+.search-field
+	background-color: #fff
+	color: #000
+	border: 0.1rem solid #e5e5e5
+	border-radius: 1rem 10rem 10rem 1rem
+	padding: 0 5rem 0 1.8rem
+	width: 100%
+	line-height: 1.33
+	outline: none
+	height: 4.5rem
+	transition: $transition
+	&:focus
+		border-color: #c5c5c5	
+		
+
+.btn-search
+	position: absolute
+	right: -0.1rem
+	top: 50%
+	transform: translateY(-50%)
+	border-radius: 10rem
+	border: none
+	width: 4.6rem
+	height: 4.6rem
+	background-color: $scandal
+	background-image: url('../img/ico-search.png')
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: 2.8rem 2.7rem
+	&:hover, &:active
+		background-color: $scandal
+		background-image: url('../img/ico-search.png')
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		outline: none
+	&:hover
+		color: #fff
+		background-color: #b9d6d4
+	&:active, &:focus
+		background-color: #acc6c4
+		color: #fff
+
+.btn-log-reg
+  display: inline-block
+  background-color: $scandal
+  color: #fff
+  text-transform: uppercase
+  font-size: 1.2rem
+  font-weight: 700
+  border-radius: 0.3rem
+  line-height: 1.7rem
+  padding: 0.7rem 0.7rem 0.5rem
+  &:hover
+    color: #fff
+    background-color: #b9d6d4
+  &:active, &:focus
+    background-color: #acc6c4
+    color: #fff
+
+.log-reg
+  display: flex
+  align-items: center
+
+.carello
+	display: flex
+	align-items: center
+	display: block
+	margin-right: 0.5rem
+	span
+		display: inline-block
+		font-size: 1.2rem
+		line-height: 1.33
+		font-weight: 700
+		text-transform: uppercase
+		color: #a3a2a2
+	img
+		display: inline-block
+	@include lg
+		span
+			display: none
+
+.cart-block
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	position: relative
+
+.cart-block_drop
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	width: 39.5rem
+	border-radius: $radius
+	border: 0.1rem solid #d2d2d2
+	background-color: #fff
+	z-index: 5
+	overflow: hidden
+	transform: translateX(8%)
+	&.active
+		display: block
+
+.cart-drop_price
+	display: block
+	padding: 1.7rem 2.2rem 1.3rem
+	background-color: #f39100
+	display: flex
+	justify-content: space-between
+	strong,
+	span
+		display: inline-block
+		font-family: $default-font
+		font-size: 1.4rem
+		text-transform: uppercase
+		color: #fff
+
+.cart-drop_footer
+	background-color: #b5d2d0
+	padding: 1.1rem 2.6rem
+	display: flex
+	align-items: center
+	border-radius: 0 0 $radius $radius
+	margin-bottom: -0.1rem
+	img
+		display: inline-block
+		margin-right: 1.1rem
+	span
+		display: inline-block
+		font-family: $default-font
+		font-size: 1.4rem
+		text-transform: uppercase
+		color: #614637
+	
+.cart-product_title
+	padding-right: 2.2rem
+	display: flex
+	justify-content: space-between
+	align-items: center
+	strong
+		display: inline-block
+		font-family: $default-font
+		font-size: 1.2rem
+		text-transform: uppercase
+		color: #6f6f6f
+	span
+		display: inline-block
+		width: 1.5rem
+		fill: #fff
+		img
+			width: 100%
+			height: auto
+
+.cart-drop_content
+	padding: 0.8rem 2.2rem
+
+.cart-product_row
+	display: block
+	width: 100%
+	border: none
+	background: none
+	padding: 2rem 0
+	border-bottom: 0.1rem dashed #d1d1d1
+	border-top: 0.1rem dashed #d1d1d1
+	&:first-child
+		border-top: none
+	&:last-child
+		border-bottom: none
+
+.cart-product_info
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 1.5rem
+
+.cart-product_info-name
+	display: inline-block
+	font-size: 1.3rem
+
+.cart-product_info-row
+	span
+		display: inline-block
+		font-size: 1.3rem
+		margin-left: 2.5rem
+		&:last-child
+			font-weight: bold
+			color: #f39100
+
+.cart-drop_title
+	display: block
+	padding: 2.4rem 2.2rem 1.6rem
+	span
+		display: inline-block
+		color: #624639
+		font-family: $default-font
+		font-size: 1.6rem
+		text-transform: uppercase
+	
+
+.prod-count
+  display: inline-block
+  width: 4.1rem
+  height: 4.1rem
+  padding: 1.5rem
+  line-height: 0
+  background-color: $scandal
+  text-align: center
+  color: #fff
+  border-radius: 100%
+  font-weight: 700
+  &:hover
+    color: #fff
+    background-color: #b9d6d4
+  &:active, &:focus
+    background-color: #acc6c4
+    color: #fff
+
+.main-top
+	padding-top: 3rem
+	padding-bottom: 1.5rem
+	margin-bottom: 1.5rem
+	background-color: #fff
+	@include lg
+		padding-top: 0
+		padding-bottom: 0
+
+.hide-lg
+	@include lg
+		display: none
+.hide-sm
+	@include sm
+		display: none
+
+.show-lg
+	display: none
+	@include lg
+		display: block
+
+.main-nav
+	margin: 0 1.5rem 1.1rem
+	padding-bottom: 1.1rem
+	border-bottom: 1px solid #e6e6e6
+	transition: $slow-transition
+	@include lg
+		display: none
+
+.nav-item
+	display: flex
+	align-items: center
+	display: inline-block
+	margin-right: 2.5rem
+	img
+		display: inline-block
+		width: 4.1rem
+		height: 4.1rem
+		transition: $slow-transition
+		margin-right: 1.3rem
+	strong
+		display: inline-block
+		text-transform: uppercase
+		font-size: 1.4rem
+		font-family: "MontserratBold"
+		color: #9aa29e
+		background: linear-gradient(to right, #000, #000) no-repeat 50% 100%
+		background-size: 0 0.1rem
+		transition: $transition
+	&:hover
+		strong
+			background-size: 100% 1px
+			color: #000
+
+.slider-row
+	overflow: hidden
+	margin: 0 1.5rem
+	background-color: #f8f7ee
+	padding: 1.2rem 0 1.5rem
+	@include lg
+		padding-bottom: 0
+		margin: 0
+	@include sm
+		padding: 0
+
+.main-slider
+	@include lg
+		margin-bottom: 1.5rem
+	@include sm
+		margin-bottom: 1.5rem
+		padding: 0
+
+.slide-one
+  overflow: hidden
+  position: relative
+  img
+    width: 100%
+    height: auto
+
+.slide-box_one
+  position: absolute
+  width: 41.2rem
+  height: 37.7rem
+  left: -6.2rem
+  bottom: -6.2rem
+  background: rgba(0,0,0,.5);
+  border-radius: 100%
+  color: #fff
+  display: flex
+  align-items: flex-end
+  justify-content: flex-start
+
+.slide-box_holder
+  width: 65%
+  margin: 0 0 9.5rem 10.5rem
+
+.slide-box_heading
+  font-family: "HelveticaNeueLTStdHv"
+  font-size: 4.7rem
+  line-height: 4.7rem
+  margin-bottom: 1rem
+  span
+    font-family: "HelveticaNeueLTStdLt"
+
+.slide-box_subhead
+  font-size: 1.6rem
+  line-height: 1.8rem
+
+.top-banner_heading
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  text-transform: uppercase
+  padding: 0.7rem 1.2rem
+  background-color: rgba(249,157,58,.8)
+  color: #fff
+  transition: $slow-transition
+  font-size: 1.5rem
+  line-height: 1.7rem
+
+.top-banner_item
+	margin-bottom: 1.5rem
+	padding: 0
+	&:last-child
+		margin-bottom: 0
+	img
+		width: 100%
+		height: auto
+	@include lg
+		padding: 0 1rem
+
+.top-banner_wrap
+	@include lg
+		margin: 0 -1rem
+
+  .top-banner_inner
+    position: relative
+    transition: $slow-transition
+    &:hover
+      box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,.3)
+
+.top-banner_head-second
+  background-color: rgba(145,193,190,.8)
+  text-align: right
+
+.slick-dots
+  position: absolute
+  bottom: 1.5rem
+  right: 3rem
+  li
+    display: inline-block
+    margin: 0 0.5rem
+    button
+      font-size: 0
+      border: none
+      width: 0.9rem
+      height: 0.9rem
+      border-radius: 10rem
+      background-color: rgba(255,255,255,.5)
+      line-height: 0
+      padding: 0
+  .slick-active
+    button
+      background-color: #dc9018
+
+.page-top
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+h3
+  color: #675751
+  font-size: 1.8rem
+  margin-bottom: 2rem
+  text-transform: uppercase
+  font-family: $default-font
+  font-weight: 700
+
+.offer-box
+  margin-bottom: 1.5rem
+
+.offer-row,
+.offer-box
+  display: flex
+  align-items: stretch
+
+.offer-box
+  padding: 0
+  p
+    font-size: 1.6rem
+    color: $text-color
+    font-family: $default-font
+
+.offer-left_hold,
+.offer-right_hold
+  padding-top: 3rem
+  padding-bottom: 2rem
+  background-color: #fff
+  transition: $slow-transition
+  h3
+    margin-bottom: 1.7rem
+    padding: 0.8rem 0
+    display: block
+  &:hover
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3)
+
+.offer-left_hold
+  margin-right: 1.5rem
+  padding-left: 3rem
+  padding-right: 1.5rem
+  h3
+    margin-bottom: 0.7rem
+  p
+    line-height: 1.5
+
+.offer-right_hold
+  overflow: hidden
+  margin-left: 1.5rem
+  h3
+    text-indent: 2.5rem
+    background-color: #b4d2d0
+    color: #fff
+  p
+    line-height: 1.2
+    padding-left: 2.5rem
+  img
+    width: 100%
+    height: auto
+    max-width: 18rem
+    margin: 0 auto
+
+.offer-right_content
+  padding-left: 0
+  padding-right: 3rem
+
+.discount
+  color: #f99d1c
+  font-family: $default-font
+  font-size: 1.6rem
+  line-height: 1.5
+  text-transform: uppercase
+  display: block
+  font-weight: 700
+
+.offer_read-more
+  color: #5b3042
+  font-size: 1.6rem
+  line-height: 1.1
+  display: block
+  text-align: right
+  text-transform: capitalize
+  font-weight: 700
+  margin-top: 3rem
+  margin-right: 3rem
+  i
+    transition: $transition
+  &:hover,
+  &:active,
+  &:focus
+    color: #64404f
+  &:hover
+    i
+      transform: translateX(1rem)
+
+.product-slider
+  text-align: center
+
+.product-slider_wrap
+  padding: 2.7rem 0
+  background-color: #fff
+  margin-bottom: 1.5rem
+  position: relative
+  .slick-arrow
+    position: absolute
+    left: auto
+    right: -2.7rem
+    bottom: 50%
+    margin-top: -2.3rem
+    border-radius: 10rem 0 0 10rem
+    background-color: #b4d2d0
+    width: 2.7rem
+    height: 5.5rem
+    border: none
+    color: #eeeeee
+    font-size: 2.9rem
+    text-align: right
+    padding: 0
+    line-height: 0
+    z-index: 100
+    transform: rotate(180deg)
+    &:hover
+      background-color: #9cd1cd
+      color: #fff
+  .slick-next
+    right: auto
+    left: -2.7rem
+    transform: rotate(0)
+
+.product-slider_box
+  padding: 2.5rem 2.5rem 1.2rem 2.5rem
+  border-radius: 0.5rem
+  border: 1px solid #ededed
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+  margin-top: 0.5rem
+  margin-bottom: 3.2rem
+  text-align: center
+  min-height: 25rem
+  position: relative
+  display: flex
+  align-items: flex-end
+  justify-content: space-around
+  img
+    max-width: 100%
+    height: auto
+    margin: 0 auto
+    display: inline-block
+  &:hover .sale-mark
+    transform: scale(1.15) rotate(7deg)
+
+.sale-mark
+  position: absolute
+  top: -0.1rem
+  left: -0.7rem
+  width: 66px
+  height: 66px
+  border: 0.5rem solid #aaafe1
+  border-radius: 10rem
+  background-color: #fff
+  display: flex
+  -ms-align-items: center
+  align-items: center
+  justify-content: space-around
+  font-size: 1.6rem
+  text-transform: uppercase
+  color: #aaafe1
+  font-weight: 700
+  font-family: $default-font
+  transition: $transition
+
+h4
+  color: #5b3042
+  font-size: 1.6rem
+  line-height: 1.1
+  font-family: $default-font
+  text-transform: capitalize
+  font-weight: bold
+  margin-bottom: 2rem
+
+.btn-order
+  display: inline-block
+  font-size: 1.4rem
+  line-height: 1
+  margin-bottom: 1.5rem
+  background-color: #f99d1c
+  border-radius: 0.7rem
+  padding: 0.8rem 1.8rem
+  font-family: $default-font
+  border: none
+  color: #fff
+  text-transform: uppercase
+  &:hover
+    background-color: #faa834
+  &:active
+    background-color: #fc980b
+
+  span
+    font-weight: 700
+    display: block
+
+.product-slider_box-bottom
+  text-align: center
+
+.rate-star
+  border: none
+  background-color: transparent
+  color: #e5e5e5
+  padding: 0
+  margin-right: 0.3rem
+  &:hover
+    color: #8c8c8c
+  &:last-child
+    margin-right: 0
+
+.rated
+  color: #8c8c8c  
+
+.rate-row
+  opacity: 0
+  transition: $slow-transition
+
+.product-wrap
+  &:hover
+    .rate-row
+      opacity: 1
+
+.recipe-img
+  img
+    width: 100%
+    height: auto
+
+.recipes-wrap
+  padding: 0
+  display: flex
+  align-items: stretch
+  margin-bottom: 4rem
+
+.recipes-right_wrap,
+.recipes-left_wrap
+  background-color: #fff
+  padding-top: 3.4rem
+  padding-bottom: 3.4rem
+  overflow: hidden
+  margin-bottom: 1.5rem
+
+h5
+  color: #f99d1c
+  font-size: 1.6rem
+  font-family: $default-font
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 2rem
+  letter-spacing: 0.5px
+
+.recipe-paragraph
+  p
+    margin-bottom: 1.9rem
+    width: 95%
+    line-height: 1.2
+    font-size: 1.6rem
+    color: $text-color
+  .last-paragraph
+    margin-bottom: 4.6rem
+
+.btn-discover-prod
+  font-size: 1.4rem
+  text-transform: uppercase
+  line-height: 4rem
+  padding: 0 1.4rem
+  color: #fff
+  background-color: $scandal
+  font-weight: bold
+  border: none
+  border-radius: 0.5rem
+  &:hover
+    background-color: #acd3d0
+  &:active
+    background-color: #a0c1bf
+
+.recipe-right
+  p
+    line-height: 1.2
+    font-size: 1.6rem
+    color: $text-color
+  img
+    margin-bottom: 2.8rem
+    max-width: 100%
+    height: auto
+
+.recipe-img-col
+  padding: 0
+
+.recipe-read-more
+  color: #f9a128
+  font-size: 1.2rem
+  font-family: $default-font
+  font-weight: bold
+  text-transform: uppercase
+  &:hover,
+  &:active,
+  &:focus
+    color: #ff9400
+
+/* footer area */
+.footer-holder
+  width: 100%
+  background: #fff url('../img/footer-bg.jpg') no-repeat 0 0
+  background-size: 100% auto
+
+.footer
+  padding-top: 6.1rem
+
+.prod-categories
+  li
+    border-bottom: 0.1rem solid #ededed
+  a
+    display: block
+    font-size: 1.7rem
+    line-height: 1.1
+    color: #979b97
+    padding: 1.2rem 0
+    text-indent: 0.2rem
+    &:hover
+      background-color: rgba(248, 194, 122, 0.2)
+
+.contacts
+  p
+    color: #707170
+  .last-paragraph
+    margin-bottom: 2.5rem
+
+.footer-social
+  a
+    display: inline-block
+    width: 4.2rem
+    height: 4.2rem
+    background-color: $scandal
+    border-radius: 10rem
+    margin-right: 0.5rem
+    color: #fff
+    vertical-align: middle
+    text-align: center
+    font-size: 2.2rem
+    line-height: 4.2rem
+    transition: $slow-transition
+    &:hover
+      transform: scale(0.9)
+      background-color: #f99d1c
+    i
+      display: inline-block
+
+.footer-nav
+  margin-bottom: 3rem
+
+.footer-bottom-nav
+  margin-bottom: 3rem
+  ul
+    li
+      float: left
+      border-right: 0.1rem solid #9d9d9d
+      line-height: 0
+      &:last-child
+        border-right: none
+    a
+      display: inline-block
+      font-size: 1.5rem
+      line-height: 1.1
+      padding: 0 0.5rem
+      color: #9d9d9d
+      &:hover
+        color: #f99d1c
+
+.footer-recipe
+  border-bottom: 0.1rem solid #ededed
+  padding: 0.7rem 0
+  display: flex
+  align-items: center
+  flex-direction: row
+  justify-content: space-between
+  img
+    border: 0.3rem solid #ededed
+    width: 100%
+    height: auto
+  a,
+  span
+    display: block
+  span
+    color: #979b97
+  a
+    font-weight: bold
+    color: #707170
+    &:hover, &:active, #focus
+      color: #000
+
+.footer-nav
+  h3
+    font-size: 1.6rem
+    margin-bottom: 1.7rem
+
+.copyrights
+  text-align: right
+  font-size: 1.5rem
+  color: #9d9d9d
+  font-family: $default-font
+
+.footer-heading_caret
+  display: none
+  width: 2.9rem
+  height: 2.9rem
+  background-color: #c4c4c4
+  border-radius: 10rem
+  text-align: center
+  color: #fff
+  font-size: 1.5rem
+  transition: $slow-transition
+  i
+    vertical-align: middle
+
+.active-drop
+  .prod-categories,
+  .footer-recipe_wrap,
+  .prod-categories,
+  .footer-contacts_holder
+    max-height: 500px
+    opacity: 1
+
+.active-drop
+  .footer-heading_caret
+    transform: rotate(90deg)
+    background-color: #f99d1c
+
+.prod-categories,
+.footer-recipe_wrap,
+.prod-categories,
+.footer-contacts_holder
+  transition: $slow-transition
+
+.footer-heading_holder
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@import 'new'

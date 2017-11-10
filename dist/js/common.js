@@ -55,3 +55,5 @@ document.getElementById('footer-nav-4').onclick = function() {
 $('.carello, .prod-count').click(function() {
 	$('.cart-block_drop').toggleClass('active');
 })
+
+

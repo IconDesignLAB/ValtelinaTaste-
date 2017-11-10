@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?klx6ui');
+  src:  url('fonts/icomoon.eot?klx6ui#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?klx6ui') format('truetype'),
+    url('fonts/icomoon.woff?klx6ui') format('woff'),
+    url('fonts/icomoon.svg?klx6ui#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-2:before {
+  content: "\e901";
+}
+.icon-3:before {
+  content: "\e902";
+}
+.icon-0:before {
+  content: "\e903";
+}
+.icon-1:before {
+  content: "\e904";
+}
+.icon-frash:before {
+  content: "\e905";
+}
+.icon-icons-valtellina-02:before {
+  content: "\e909";
+}
+.icon-icons-valtellina-03:before {
+  content: "\e90a";
+}
+.icon-icons-valtellina-04:before {
+  content: "\e90b";
+}
+.icon-icons-valtellina-05:before {
+  content: "\e90c";
+}
+.icon-icons-valtellina-11:before {
+  content: "\e911";
+}
+.icon-search:before {
+  content: "\e925";
+}
+.icon-check:before {
+  content: "\e926";
+}
+.icon-icons-valtellina-08:before {
+  content: "\e90e";
+}
+.icon-icons-valtellina-09:before {
+  content: "\e90f";
+}
+.icon-ico_trash:before {
+  content: "\e927";
+}
+.icon-icons-valtellina-10:before {
+  content: "\e910";
+}
+.icon-icons-valtellina-06:before {
+  content: "\e90d";
+}
+.icon-ico_heart:before {
+  content: "\e928";
+}
+.icon-ico_mail:before {
+  content: "\e929";
+}
+.icon-ico_modifica:before {
+  content: "\e92a";
+}
+.icon-ico_arrow:before {
+  content: "\e92b";
+}
+.icon-arrow-down:before {
+  content: "\e900";
+}
+.icon-icons-valtellina-01:before {
+  content: "\e908";
+}

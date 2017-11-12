@@ -91,7 +91,11 @@ body
 	background-color: #fff
 	margin-bottom: 15px
 	&.container-transparent
-		background-color: transparent	
+		background-color: transparent
+	&.slider-container
+		padding: 1.5rem
+	@include md
+		padding: 0
 	
 .container-inner
 	padding: 0 15px
@@ -410,44 +414,72 @@ body
 	@include lg
 		margin-bottom: 1.5rem
 	@include sm
-		margin-bottom: 1.5rem
 		padding: 0
+		margin-bottom: 0.4rem
+.slick-slide
+	img
+		width: 100%
+		height: auto
+	@include md
+		min-height: 50rem
+	@include sm
+		min-height: 27rem
 
-.slide-one
+
+.slide-cover
   overflow: hidden
   position: relative
-  img
-    width: 100%
-    height: auto
 
-.slide-box_one
-  position: absolute
-  width: 41.2rem
-  height: 37.7rem
-  left: -6.2rem
-  bottom: -6.2rem
-  background: rgba(0,0,0,.5);
-  border-radius: 100%
-  color: #fff
-  display: flex
-  align-items: flex-end
-  justify-content: flex-start
+.slide-holder
+	position: relative
+	background-size: cover
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	min-height: 54rem
+	@include sm
+		min-height: 27rem
+
+.slide-box_wrap
+	position: absolute
+	left: 0
+	bottom: 0
+	color: #fff
+	display: flex
+	align-items: flex-end
+	justify-content: flex-start
+	font-size: 1rem
+	&:before
+		content: ''
+		position: absolute
+		width: 38em
+		height: 38em
+		left: 0
+		bottom: 0
+		background: rgba(0,0,0,.5)
+		border-radius: 100%
+		z-index: 1
+		transform: translate(-15%, 15%)
+	@include sm
+		font-size: 0.6rem
 
 .slide-box_holder
-  width: 65%
-  margin: 0 0 9.5rem 10.5rem
+	max-width: 23em
+	margin: 0 0 3.9em 3.6em
+	position: relative
+	z-index: 2
 
 .slide-box_heading
-  font-family: "HelveticaNeueLTStdHv"
-  font-size: 4.7rem
-  line-height: 4.7rem
-  margin-bottom: 1rem
-  span
-    font-family: "HelveticaNeueLTStdLt"
-
+	font-family: "HelveticaNeueLTStdHv"
+	font-size: 4.7em
+	line-height: 1
+	margin-bottom: 0.5em
+	span
+		font-family: "HelveticaNeueLTStdLt"
+	@include sm
+	
 .slide-box_subhead
-  font-size: 1.6rem
-  line-height: 1.8rem
+	font-size: 1.6em
+	line-height: 1.5
 
 .top-banner_heading
   position: absolute
@@ -472,24 +504,20 @@ body
 		width: 100%
 		height: auto
 	@include lg
-		padding: 0 1rem
 	@include md
-		padding: 0 1rem
+		margin-bottom: 0.4rem
 	@include sm
 		padding: 0
 
 .top-banner_wrap
-	@include lg
-		margin: 0 -1rem
-	@include lg
+	@include sm
 		padding: 0
-		margin: 0
 
-  .top-banner_inner
-    position: relative
-    transition: $slow-transition
-    &:hover
-      box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,.3)
+.top-banner_inner
+	position: relative
+	transition: $slow-transition
+	&:hover
+		box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2)
 
 .top-banner_head-second
   background-color: rgba(145,193,190,.8)
@@ -520,7 +548,6 @@ body
 .page-top
 	display: flex
 	align-items: center
-	flex-wrap: wrap
 
 h3
   color: #675751
@@ -531,35 +558,28 @@ h3
   font-weight: 700
 
 .offer-box
-  margin-bottom: 1.5rem
-
-.offer-row,
-.offer-box
-  display: flex
-  align-items: stretch
-
-.offer-box
-  padding: 0
-  p
-    font-size: 1.6rem
-    color: $text-color
-    font-family: $default-font
+	min-height: 22rem
+	margin-bottom: 1.5rem
+	background-color: #fff
+	p
+		font-size: 1.6rem
+		color: $text-color
+		font-family: $default-font
 
 .offer-left_hold,
 .offer-right_hold
-  padding-top: 3rem
-  padding-bottom: 2rem
-  background-color: #fff
-  transition: $slow-transition
-  h3
-    margin-bottom: 1.7rem
-    padding: 0.8rem 0
-    display: block
-  &:hover
-    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3)
+	padding-top: 3rem
+	padding-bottom: 1rem
+	background-color: #fff
+	transition: $slow-transition
+	h3
+		margin-bottom: 1.7rem
+		padding: 0.8rem 0
+		display: block
+	&:hover
+		box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2)
 
 .offer-left_hold
-  margin-right: 1.5rem
   padding-left: 3rem
   padding-right: 1.5rem
   h3
@@ -568,21 +588,25 @@ h3
     line-height: 1.5
 
 .offer-right_hold
-  overflow: hidden
-  margin-left: 1.5rem
-  h3
-    text-indent: 2.5rem
-    background-color: #b4d2d0
-    color: #fff
-  p
-    line-height: 1.2
-    padding-left: 2.5rem
-  img
-    width: 100%
-    height: auto
-    max-width: 18rem
-    margin: 0 auto
-
+	overflow: hidden
+	h3
+		text-indent: 2.5rem
+		background-color: #b4d2d0
+		color: #fff
+	p
+		line-height: 1.2
+		padding-left: 2.5rem
+	img
+		width: 100%
+		height: auto
+		max-width: 15rem
+		margin: 0 auto
+	
+.offer-right_hold,
+.offer-left_hold	
+	@include sm
+		margin: 0	
+	
 .offer-right_content
   padding-left: 0
   padding-right: 3rem
@@ -668,8 +692,6 @@ h3
     height: auto
     margin: 0 auto
     display: inline-block
-  &:hover .sale-mark
-    transform: scale(1.15) rotate(7deg)
 
 .sale-mark
   position: absolute
@@ -679,7 +701,6 @@ h3
   height: 66px
   border: 0.5rem solid #aaafe1
   border-radius: 10rem
-  background-color: #fff
   display: flex
   -ms-align-items: center
   align-items: center
@@ -753,10 +774,11 @@ h4
     height: auto
 
 .recipes-wrap
-  padding: 0
-  display: flex
-  align-items: stretch
-  margin-bottom: 4rem
+	padding: 0
+	display: flex
+	align-items: stretch
+	margin-bottom: 4rem
+	flex-wrap: wrap
 
 .recipes-right_wrap,
 .recipes-left_wrap

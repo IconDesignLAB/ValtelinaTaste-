@@ -12,8 +12,8 @@
   slidesToScroll: 1,
   arrows: true,
   autoplay: true,
-  nextArrow: '<button class="slick-arrow slick-prev"><i class="fa fa-caret-left" aria-hidden="true"></i></button>',
-  prevArrow: '<button class="slick-arrow slick-next"><i class="fa fa-caret-left" aria-hidden="true"></i></button>',
+  prevArrow: '<button class="slick-arrow slick-prev"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
+  nextArrow: '<button class="slick-arrow slick-next"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
   responsive: [
     {
         breakpoint: 980,
@@ -55,5 +55,10 @@ document.getElementById('footer-nav-4').onclick = function() {
 $('.carello, .prod-count').click(function() {
 	$('.cart-block_drop').toggleClass('active');
 })
+$('.btn-mobile-nav').click(function() {
+	$(this).toggleClass('active');
+	$('.main-nav_hide').toggleClass('active');
+})
+
 
 

@@ -75,27 +75,37 @@ html
 		font-size: 10px
 
 body
-  font-size: 1.6rem
-  min-width: 320px
-  background-color: #f0f0f0
-  position: relative
-  line-height: 1.33
-  font-family: $default-font
-  color: $text-color
-  overflow-x: hidden
-  opacity: 1
+	font-size: 1.6rem
+	min-width: 320px
+	background-color: #f0f0f0
+	position: relative
+	line-height: 1.33
+	font-family: $default-font
+	color: $text-color
+	overflow-x: hidden
+	opacity: 1
+	@include lg
+		background-color: #fff
 
 /* General reset end */
 
 .main-container
 	background-color: #fff
 	margin-bottom: 15px
-	&.container-transparent
+	&.offer_container
 		background-color: transparent
 	&.slider-container
-		padding: 1.5rem
-	@include md
-		padding: 0
+		padding: 15px
+	&.product-slider_container
+		background-color: transparent
+	@include lg
+		&.slider-container
+			padding: 0
+		&.offer_container
+			display: none
+		&.product-slider_container
+			background-color: transparent
+			margin-bottom: 0
 	
 .container-inner
 	padding: 0 15px
@@ -357,7 +367,7 @@ body
 	@include sm
 		display: none
 
-.show-lg
+.mobile-button
 	display: none
 	@include lg
 		display: block
@@ -375,7 +385,20 @@ body
 .main-nav_hide
 	@include lg
 		display: none
-
+	&.active
+		display: block
+		.main-nav
+			position: absolute
+			left: 0
+			right: 0
+			top: -4rem
+			flex-wrap: wrap
+			z-index: 100
+			background-color: #fff
+		.nav-item
+			width: 100%
+			margin: 1rem	
+	
 .nav-item
 	display: flex
 	align-items: center
@@ -407,22 +430,19 @@ body
 	@include lg
 		padding-bottom: 0
 		margin: 0
-	@include sm
+	@include md
 		padding: 0
 
 .main-slider
 	@include lg
 		margin-bottom: 1.5rem
-	@include sm
+	@include md
 		padding: 0
 		margin-bottom: 0.4rem
 .slick-slide
-	img
-		width: 100%
-		height: auto
-	@include md
+	@include lg
 		min-height: 50rem
-	@include sm
+	@include md
 		min-height: 27rem
 
 
@@ -482,18 +502,20 @@ body
 	line-height: 1.5
 
 .top-banner_heading
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  width: 100%
-  text-transform: uppercase
-  padding: 0.7rem 1.2rem
-  background-color: rgba(249,157,58,.8)
-  color: #fff
-  transition: $slow-transition
-  font-size: 1.5rem
-  line-height: 1.7rem
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	width: 100%
+	text-transform: uppercase
+	padding: 0.7rem 1.2rem
+	background-color: rgba(249,157,58,.8)
+	color: #fff
+	transition: $slow-transition
+	font-size: 1.5rem
+	line-height: 1.7rem
+	@include lg
+		text-align: center
 
 .top-banner_item
 	margin-bottom: 1.5rem
@@ -506,7 +528,7 @@ body
 	@include lg
 	@include md
 		margin-bottom: 0.4rem
-	@include sm
+	@include lg
 		padding: 0
 
 .top-banner_wrap
@@ -516,12 +538,28 @@ body
 .top-banner_inner
 	position: relative
 	transition: $slow-transition
+	background-size: cover
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	min-height: 17rem
 	&:hover
 		box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2)
+	@include lg
+		min-height: 13rem 
+		max-width: 50rem
+		margin: 0 auto
+		&.top-banner-01
+			background-image: url('../img/banner-top-03-mobile.jpg') !important
+		&.top-banner-02
+			background-image: url('../img/banner-top-02-mobile.jpg') !important
+		&.top-banner-03
+			background-image: url('../img/banner-top-01-mobile.jpg') !important
 
 .top-banner_head-second
-  background-color: rgba(145,193,190,.8)
-  text-align: right
+	background-color: rgba(145,193,190,.8)
+	text-align: right
+	@include lg
+		text-align: center
 
 .slick-dots
 	position: absolute
@@ -550,12 +588,15 @@ body
 	align-items: center
 
 h3
-  color: #675751
-  font-size: 1.8rem
-  margin-bottom: 2rem
-  text-transform: uppercase
-  font-family: $default-font
-  font-weight: 700
+	color: #675751
+	font-size: 1.8rem
+	margin-bottom: 2rem
+	text-transform: uppercase
+	font-family: $default-font
+	font-weight: 700
+	@include lg
+		text-align: center
+		font-size: 1.5rem
 
 .offer-box
 	min-height: 22rem
@@ -565,6 +606,10 @@ h3
 		font-size: 1.6rem
 		color: $text-color
 		font-family: $default-font
+
+.col-offer
+	@include lg
+		padding: 0
 
 .offer-left_hold,
 .offer-right_hold
@@ -580,12 +625,14 @@ h3
 		box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2)
 
 .offer-left_hold
-  padding-left: 3rem
-  padding-right: 1.5rem
-  h3
-    margin-bottom: 0.7rem
-  p
-    line-height: 1.5
+	padding-left: 3rem
+	padding-right: 1.5rem
+	h3
+		margin-bottom: 0.7rem
+	p
+		line-height: 1.5
+	@include md
+	padding: 1.5rem
 
 .offer-right_hold
 	overflow: hidden
@@ -601,15 +648,23 @@ h3
 		height: auto
 		max-width: 15rem
 		margin: 0 auto
+	@include lg
+		p
+			padding: 0 1.5rem
 	
 .offer-right_hold,
-.offer-left_hold	
-	@include sm
-		margin: 0	
+.offer-left_hold
+	@include lg
+		padding-top: 1.5rem
+		padding-bottom: 1.5rem
+	@include md
+		margin: 0
 	
 .offer-right_content
-  padding-left: 0
-  padding-right: 3rem
+	padding-left: 0
+	padding-right: 3rem
+	@include lg
+		padding: 0
 
 .discount
   color: #f99d1c
@@ -644,73 +699,97 @@ h3
   text-align: center
 
 .product-slider_wrap
-  padding: 2.7rem 0
-  background-color: #fff
-  margin-bottom: 1.5rem
-  position: relative
-  .slick-arrow
-    position: absolute
-    left: auto
-    right: -2.7rem
-    bottom: 50%
-    margin-top: -2.3rem
-    border-radius: 10rem 0 0 10rem
-    background-color: #b4d2d0
-    width: 2.7rem
-    height: 5.5rem
-    border: none
-    color: #eeeeee
-    font-size: 2.9rem
-    text-align: right
-    padding: 0
-    line-height: 0
-    z-index: 100
-    transform: rotate(180deg)
-    &:hover
-      background-color: #9cd1cd
-      color: #fff
-  .slick-next
-    right: auto
-    left: -2.7rem
-    transform: rotate(0)
+	padding: 2.5rem 0 1.5rem
+	background-color: #fff
+	position: relative
+	.slick-arrow
+		position: absolute
+		left: auto
+		top: 50%
+		transform: translateY(50%)
+		background-color: transparent
+		border: none
+		padding: 0
+		line-height: 0
+		z-index: 100
+	.slick-prev
+		left: -4rem
+		right: auto
+		transform: rotate(180deg)
+	.slick-next
+		left: auto
+		right: -4rem
+		transform: rotate(0)
+	.ico-slider-arrow
+		&:before
+			font-size: 6rem
+	@include lg
+		.ico-slider-arrow
+			&:before
+				content: '\e908'
+				font-size: 4rem
+		.slick-prev
+			left: 2.5rem
+			right: auto
+			transform: rotate(180deg)
+		.slick-next
+			left: auto
+			right: 2.5rem
+			transform: rotate(0)
+		h3
+			text-align: center
 
 .product-slider_box
-  padding: 2.5rem 2.5rem 1.2rem 2.5rem
-  border-radius: 0.5rem
-  border: 1px solid #ededed
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
-  margin-top: 0.5rem
-  margin-bottom: 3.2rem
-  text-align: center
-  min-height: 25rem
-  position: relative
-  display: flex
-  align-items: flex-end
-  justify-content: space-around
-  img
-    max-width: 100%
-    height: auto
-    margin: 0 auto
-    display: inline-block
+	padding: 2.5rem 2.5rem 1.2rem 2.5rem
+	border-radius: 0.5rem
+	border: 0.1rem solid rgba(0, 0, 0, 0.05)
+	box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1)
+	margin-top: 0.5rem
+	margin-bottom: 3.2rem
+	text-align: center
+	height: 25rem
+	position: relative
+	display: flex
+	align-items: flex-end
+	justify-content: space-around
+	img
+		margin: 0 auto
+		max-height: 20rem
+		display: inline-block
+	@include lg
+		box-shadow: none
+		border: none
 
 .sale-mark
-  position: absolute
-  top: -0.1rem
-  left: -0.7rem
-  width: 66px
-  height: 66px
-  border: 0.5rem solid #aaafe1
-  border-radius: 10rem
-  display: flex
-  -ms-align-items: center
-  align-items: center
-  justify-content: space-around
-  font-size: 1.6rem
-  text-transform: uppercase
-  color: #aaafe1
-  font-weight: 700
-  font-family: $default-font
-  transition: $transition
+	font-size: 1rem
+	position: absolute
+	top: -0.1rem
+	left: -0.7rem
+	width: 6.6em
+	height: 6.6em
+	border: 0.5em solid #aaafe1
+	border-radius: 10em
+	display: flex
+	-ms-align-items: center
+	align-items: center
+	justify-content: space-around
+	transition: $transition
+	span
+		display: inline-block
+		font-size: 1.6em
+		line-height: 1
+		text-transform: uppercase
+		color: #aaafe1
+		font-weight: 700
+		font-family: $default-font
+	@include lg
+		width: 4.8em
+		height: 4.8em
+		top: 5%
+		left: 10%
+		span
+			font-size: 1.2em
+			
 
 h4
   color: #5b3042
@@ -719,7 +798,14 @@ h4
   font-family: $default-font
   text-transform: capitalize
   font-weight: bold
-  margin-bottom: 2rem
+  margin-bottom: 0.7rem
+
+.product-slider_subheading
+	display: block
+	text-align: center
+	font-size: 1.3rem
+	color: #979b97
+	margin-bottom: 1.7rem
 
 .btn-order
   display: inline-block
@@ -743,7 +829,18 @@ h4
     display: block
 
 .product-slider_box-bottom
-  text-align: center
+	text-align: center
+
+.btn-like
+	position: absolute
+	right: 0
+	top: 2%
+	background-color: transparent
+	border: none
+	transition: $transition
+	&:hover
+		.ico-heart
+			transform: scale(1.2)
 
 .rate-star
   border: none
@@ -769,9 +866,21 @@ h4
       opacity: 1
 
 .recipe-img
-  img
-    width: 100%
-    height: auto
+	img
+		width: 100%
+		height: auto
+		margin: 0 auto
+		&:nth-child(2)
+			display: none
+	@include md
+		padding: 0
+		margin-bottom: 1.3rem
+		img
+			&:nth-child(1)
+				display: none
+			&:nth-child(2)
+				display: block
+			
 
 .recipes-wrap
 	padding: 0
@@ -780,57 +889,114 @@ h4
 	margin-bottom: 4rem
 	flex-wrap: wrap
 
+.recipe-wrap
+	max-width: 50rem
+	margin: 0 auto
+
 .recipes-right_wrap,
 .recipes-left_wrap
-  background-color: #fff
-  padding-top: 3.4rem
-  padding-bottom: 3.4rem
-  overflow: hidden
-  margin-bottom: 1.5rem
+	background-color: #fff
+	padding-top: 3.4rem
+	padding-bottom: 3.4rem
+	overflow: hidden
+	margin-bottom: 1.5rem
+	@include lg
+		margin: 0 auto
+		margin-bottom: 0
+		padding-bottom: 0
+		padding-left: 0
+		padding-right: 0
+		h3
+			text-align: center
 
 h5
-  color: #f99d1c
-  font-size: 1.6rem
-  font-family: $default-font
-  font-weight: bold
-  text-transform: uppercase
-  margin-bottom: 2rem
-  letter-spacing: 0.5px
+	color: #f99d1c
+	font-size: 1.6rem
+	font-family: $default-font
+	font-weight: bold
+	text-transform: uppercase
+	margin-bottom: 2rem
+	letter-spacing: 0.05rem
 
 .recipe-paragraph
-  p
-    margin-bottom: 1.9rem
-    width: 95%
-    line-height: 1.2
-    font-size: 1.6rem
-    color: $text-color
-  .last-paragraph
-    margin-bottom: 4.6rem
+	p
+		margin-bottom: 1.9rem
+		width: 95%
+		line-height: 1.2
+		font-size: 1.6rem
+		color: $text-color
+	.last-paragraph
+		margin-bottom: 4.6rem
+	@include lg
+		padding: 0 30px
+		h5
+			margin-bottom: 1.2rem
+			font-size: 1.2rem
+		p
+			font-size: 1.2rem
+		.last-paragraph
+			margin-bottom: 1.3rem
+
 
 .btn-discover-prod
-  font-size: 1.4rem
-  text-transform: uppercase
-  line-height: 4rem
-  padding: 0 1.4rem
-  color: #fff
-  background-color: $scandal
-  font-weight: bold
-  border: none
-  border-radius: 0.5rem
-  &:hover
-    background-color: #acd3d0
-  &:active
-    background-color: #a0c1bf
+	font-size: 1.4rem
+	text-transform: uppercase
+	line-height: 4rem
+	padding: 0 1.4rem
+	color: #fff
+	background-color: $scandal
+	font-weight: bold
+	border: none
+	border-radius: 0.5rem
+	&:hover
+		background-color: #acd3d0
+	&:active
+		background-color: #a0c1bf
+	@include lg
+		font-size: 1.2rem
+		line-height: 3.2rem
+		padding: 0 1rem
 
 .recipe-right
-  p
-    line-height: 1.2
-    font-size: 1.6rem
-    color: $text-color
-  img
-    margin-bottom: 2.8rem
-    max-width: 100%
-    height: auto
+	p
+		line-height: 1.2
+		font-size: 1.6rem
+		color: $text-color
+	img
+		width: 100%
+		height: auto
+	&:last-child
+		display: none
+	@include lg
+		padding: 0
+		margin-bottom: 1.5rem
+		&:last-child
+			display: block
+		p
+			font-size: 1.2rem
+			margin-bottom: 1.5rem
+		
+
+	
+.recipe-col
+	img:nth-child(1)
+		display: block
+	img:nth-child(2)
+		display: none
+	&.recipe-img
+		padding: 0
+		margin-bottom: 2.8rem
+	@include lg
+		img:nth-child(1)
+			display: none
+		img:nth-child(2)
+			display: block
+		&.recipe-img
+			padding: 0
+			margin-bottom: 1.8rem
+		h5
+			font-size: 1.6rem
+			margin-bottom: 1.5rem
 
 .recipe-img-col
   padding: 0
@@ -848,10 +1014,11 @@ h5
 
 /* footer area */
 .footer-holder
-  width: 100%
-  background: #fff url('../img/footer-bg.jpg') no-repeat 0 0
-  background-size: 100% auto
-
+	width: 100%
+	background: #fff url('../img/footer-bg.jpg') no-repeat 0 0
+	background-size: 100% auto
+	@include lg
+		display: none
 .footer
   padding-top: 6.1rem
 
@@ -875,67 +1042,98 @@ h5
     margin-bottom: 2.5rem
 
 .footer-social
-  a
-    display: inline-block
-    width: 4.2rem
-    height: 4.2rem
-    background-color: $scandal
-    border-radius: 10rem
-    margin-right: 0.5rem
-    color: #fff
-    vertical-align: middle
-    text-align: center
-    font-size: 2.2rem
-    line-height: 4.2rem
-    transition: $slow-transition
-    &:hover
-      transform: scale(0.9)
-      background-color: #f99d1c
-    i
-      display: inline-block
-
+	a
+		display: inline-block
+		width: 4.2rem
+		height: 4.2rem
+		background-color: $scandal
+		border-radius: 10rem
+		margin-right: 0.5rem
+		color: #fff
+		vertical-align: middle
+		text-align: center
+		font-size: 2.2rem
+		line-height: 4.2rem
+		transition: $slow-transition
+		&:hover
+			transform: scale(0.9)
+			background-color: #f99d1c
+	i
+		display: inline-block
+	@include md
+		padding: 15px 0
+		border-bottom: 1px solid #bebebe
+		text-align: center
+	
+	
 .footer-nav
-  margin-bottom: 3rem
+	margin-bottom: 3rem
+	@include lg
+	h3
+		padding: 0
+		margin: 0
 
 .footer-bottom-nav
-  margin-bottom: 3rem
-  ul
-    li
-      float: left
-      border-right: 0.1rem solid #9d9d9d
-      line-height: 0
-      &:last-child
-        border-right: none
-    a
-      display: inline-block
-      font-size: 1.5rem
-      line-height: 1.1
-      padding: 0 0.5rem
-      color: #9d9d9d
-      &:hover
-        color: #f99d1c
+	margin-bottom: 3rem
+	ul
+		li
+			float: left
+			border-right: 0.1rem solid #9d9d9d
+			line-height: 0
+			&:last-child
+				border-right: none
+	a
+		display: inline-block
+		font-size: 1.5rem
+		line-height: 1.1
+		padding: 0 0.5rem
+		color: #9d9d9d
+	&:hover
+		color: #f99d1c
+	@include md
+		ul
+			float: none
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-wrap: wrap
+			li
+				margin-bottom: 1rem
+				float: none
+
+.footer-bottom
+	@include lg
+		ul
+			text-align: center
+			margin-bottom: 20px
+			li
+				display: inline-block
+				float: none
+		.copyrights
+			text-align: center
+			margin-bottom: 80px
 
 .footer-recipe
-  border-bottom: 0.1rem solid #ededed
-  padding: 0.7rem 0
-  display: flex
-  align-items: center
-  flex-direction: row
-  justify-content: space-between
-  img
-    border: 0.3rem solid #ededed
-    width: 100%
-    height: auto
-  a,
-  span
-    display: block
-  span
-    color: #979b97
-  a
-    font-weight: bold
-    color: #707170
-    &:hover, &:active, #focus
-      color: #000
+	border-bottom: 0.1rem solid #ededed
+	padding: 0.7rem 0
+	display: flex
+	align-items: center
+	flex-direction: row
+	justify-content: space-between
+	img
+		border: 0.3rem solid #ededed
+		width: 100%
+		height: auto
+	a,
+	span
+		display: block
+	span
+		color: #979b97
+	a
+		font-weight: bold
+		color: #707170
+	&:hover, &:active, &:focus
+		color: #000
 
 .footer-nav
   h3
@@ -949,30 +1147,35 @@ h5
   font-family: $default-font
 
 .footer-heading_caret
-  display: none
-  width: 2.9rem
-  height: 2.9rem
-  background-color: #c4c4c4
-  border-radius: 10rem
-  text-align: center
-  color: #fff
-  font-size: 1.5rem
-  transition: $slow-transition
-  i
-    vertical-align: middle
+	display: none
+	width: 2.9rem
+	height: 2.9rem
+	background-color: #c4c4c4
+	border-radius: 10rem
+	text-align: center
+	color: #fff
+	font-size: 1.5rem
+	transition: $slow-transition
+	i
+		vertical-align: middle
+	@include md
+		display: block
+		display: flex
+		justify-content: center
+		align-items: center
 
 .active-drop
-  .prod-categories,
-  .footer-recipe_wrap,
-  .prod-categories,
-  .footer-contacts_holder
+.prod-categories,
+.footer-recipe_wrap,
+.prod-categories,
+.footer-contacts_holder
     max-height: 500px
     opacity: 1
 
 .active-drop
-  .footer-heading_caret
-    transform: rotate(90deg)
-    background-color: #f99d1c
+	.footer-heading_caret
+		transform: rotate(90deg)
+		background-color: #f99d1c
 
 .prod-categories,
 .footer-recipe_wrap,
@@ -981,10 +1184,47 @@ h5
   transition: $slow-transition
 
 .footer-heading_holder
-  display: flex
-  justify-content: space-between
-  align-items: center
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@include lg
+		.footer-heading_holder
+			cursor: pointer
+			padding: 1.8rem 0
+			border-bottom: 1px dashed #c4c4c4
 
+.prod-categories,
+.footer-recipe_wrap,
+.prod-categories,
+.footer-contacts_holder
+	@include md
+		max-height: 0
+		overflow: hidden
+		opacity: 0
+
+.footer-mobile
+	display: none
+	@include lg
+		display: block
+
+.footer-mobile_inner
+	text-align: center
+	img
+		display: inline-block
+		margin-bottom: 1rem
+	.footer-social
+		margin-top: 1.5rem
+		margin-bottom: 2.5rem
+		border-bottom: 0
+
+.footer-mobile_row
+	display: block
+	color: #707170
+	text-align: center
+	font-size: 1.2rem
+	line-height: 1.33
+	&:last-child
+		margin-bottom: 1rem
 //new
 
 .page-top_buttons
@@ -1112,6 +1352,14 @@ h5
 		color: #fff
 		font-size: 2rem
 
+.ico-heart
+	&:before
+		content: '\e928'
+		display: block
+		color: #000
+		font-size: 2.5rem
+
+
 /*nav icons*/
 .ico-nav
 	margin-right: 0.9rem
@@ -1125,6 +1373,15 @@ h5
 		color: #5760aa
 		font-size: 4.1rem
 		background-color: #fff
+		border-radius: 100rem
+
+.ico-slider-arrow
+	&:before
+		content: '\e92b'
+		display: block
+		color: #b4d2d0
+		font-size: 4.1rem
+		background-color: transparent
 		border-radius: 100rem
 
 .ico-fresh

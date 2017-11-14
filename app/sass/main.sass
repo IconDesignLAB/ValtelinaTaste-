@@ -97,6 +97,7 @@ body
 	margin-bottom: 15px
 	&.offer_container
 		background-color: transparent
+		padding: 0
 	&.slider-container
 		padding: 15px
 	&.product-slider_container
@@ -391,7 +392,9 @@ body
 		display: block
 		.main-nav
 			position: absolute
-			left: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 100vw
 			right: 0
 			top: -4rem
 			flex-wrap: wrap
@@ -399,7 +402,7 @@ body
 			background-color: #fff
 		.nav-item
 			width: 100%
-			margin: 1rem	
+			margin: 1rem 1.5rem	
 	
 .nav-item
 	display: flex

@@ -274,7 +274,8 @@ body {
   background-color: #fff;
   margin-bottom: 15px; }
   .main-container.offer_container {
-    background-color: transparent; }
+    background-color: transparent;
+    padding: 0; }
   .main-container.slider-container {
     padding: 15px; }
   .main-container.product-slider_container {
@@ -656,7 +657,11 @@ body {
   display: block; }
   .main-nav_hide.active .main-nav {
     position: absolute;
-    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100vw;
     right: 0;
     top: -4rem;
     -webkit-flex-wrap: wrap;
@@ -666,7 +671,7 @@ body {
     background-color: #fff; }
   .main-nav_hide.active .nav-item {
     width: 100%;
-    margin: 1rem; }
+    margin: 1rem 1.5rem; }
 
 .nav-item {
   display: -webkit-box;

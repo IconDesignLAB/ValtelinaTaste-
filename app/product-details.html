@@ -6,7 +6,7 @@
 		<meta name="description" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>Category 1</title>
+		<title>Product details</title>
 
 	</head>
 
@@ -194,10 +194,10 @@
 
 		<!-- main content area START -->
 		<main class="main-category">
-			<div class="container category-wrapper">
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div class="container product-details_wrapper">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-container hide-mobile">
 					<div class="sidebar-holder">
-						<div class="sodebar-links_wrap">
+						<div class="sidebar-links_wrap">
 							<span class="sidebar_heading">freschi tradizionali</span>
 							<div class="sidebar-links">
 								<p class="sidebar-links_header"><span>&#x2192;</span>Salumi</p>
@@ -207,8 +207,8 @@
 								<a href="#">Altro</a>
 							</div>
 							<div class="sidebar-links">
-								<p class="sidebar-links_header"><span>&#x2192;</span>Formaggi stagionati</p>
-								<a href="#">Formaggelle</a>
+								<p class="sidebar-links_header active"><span>&#x2192;</span>Formaggi stagionati</p>
+								<a class="active" href="#">Formaggelle</a>
 								<a href="#">Brie e piumati</a>
 								<a href="#">Casera</a>
 								<a href="#">Altro</a>
@@ -219,6 +219,27 @@
 								<a href="#">Altro</a>
 							</div>
 						</div>
+
+						<div class="sidebar-links_wrap without-heading">
+							<span class="sidebar_heading">SELEZIONa tipo di latte</span>
+							<div class="sidebar-links">
+								<a href="#">Caprino</a>
+								<a href="#">Latte misto</a>
+								<a href="#">Ovino</a>
+								<a href="#">Vaccino</a>
+							</div>
+						</div>
+
+						<div class="sidebar-links_wrap without-heading">
+							<span class="sidebar_heading">SELEZIONa stagionatura</span>
+							<div class="sidebar-links">
+								<a href="#">Fresco (pochi giorni)</a>
+								<a href="#">Breve (max 30 gg)</a>
+								<a href="#">Media (max 6 mesi)</a>
+								<a href="#">Lunga (oltre 1 anno)</a>
+							</div>
+						</div>
+
 						<div class="sidebar-products_wrap">
 							<span class="sidebar_heading">prodotti più acquistati</span>
 							<div class="sidebar-product_block">
@@ -268,50 +289,219 @@
 							</div>
 						</div>
 
+						<div class="sidebar-products_wrap">
+							<span class="sidebar_heading">TOP SELECTION</span>
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-product-06.png" alt="Product 06">
+								</div>
+								<div class="sidebar-product_right">
+									<a href="#" class="sidebar-product_heading">Riso Venere</a>
+									<span class="sidebar-product_subheading">Alce Nero</span>
+									<p class="sidebar-product_price">€ 5,30</p>
+								</div>
+							</div>
 
-					</div>
-				</div>
-				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-					<div class="category-content">
-						<div class="pages-nav">
-							<a href="index.html">Home / </a>
-							<a href="#">Freschi tradizionali</a>
-						</div>
-						<span class="category-content_heading">Scopri la nostra selezione di prodotti <strong>Freschi Tradizionali</strong></span>
-						<p class="category-content_subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-						<div class="category-content_products">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-									<div class="category-content_image">
-										<img src="img/category-product-1.png" alt="Alt">
-									</div>
-									<span class="category-product_heading">Salumi</span>
-									<p class="category-content_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-									<button class="btn-select">seleziona prodotti</button>
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-product-07.png" alt="Product 07">
 								</div>
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-									<div class="category-content_image">
-										<img src="img/category-product-2.png" alt="Alt">
-									</div>
-									<span class="category-product_heading">Formaggi</span>
-									<p class="category-content_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-									<button class="btn-select">seleziona prodotti</button>
+								<div class="sidebar-product_right">
+									<a href="#" class="sidebar-product_heading">Birra Nora</a>
+									<span class="sidebar-product_subheading">Birrificio Italiano</span>
+									<p class="sidebar-product_price">€ 2,40</p>
 								</div>
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-									<div class="category-content_image">
-										<img src="img/category-product-3.png" alt="Alt">
-									</div>
-									<span class="category-product_heading">Ortofrutta</span>
-									<p class="category-content_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-									<button class="btn-select">seleziona prodotti</button>
+							</div>
+
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-product-03.png" alt="Product 07">
+								</div>
+								<div class="sidebar-product_right">
+									<a href="#" class="sidebar-product_heading">Funghi</a>
+									<span class="sidebar-product_subheading">Funghi Valtellina</span>
+									<p class="sidebar-product_price">€ 9,10</p>
+								</div>
+							</div>
+
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-product-08.png" alt="Product 08">
+								</div>
+								<div class="sidebar-product_right">
+									<a href="#" class="sidebar-product_heading">Marmellata</a>
+									<span class="sidebar-product_subheading">Il Mongetto</span>
+									<p class="sidebar-product_price">€ 4,30</p>
+								</div>
+							</div>
+
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-product-09.png" alt="Product 09">
+								</div>
+								<div class="sidebar-product_right">
+									<a href="#" class="sidebar-product_heading">Farina Kamut</a>
+									<span class="sidebar-product_subheading">Mulino Marino</span>
+									<p class="sidebar-product_price">€ 4,30</p>
 								</div>
 							</div>
 						</div>
 
+						<div class="sidebar-products_wrap">
+							<span class="sidebar_heading">ricette correlate</span>
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-ricette-01.png" alt="ricette">
+								</div>
+								<div class="sidebar-product_right">
 
+									<a href="#" class="sidebar-product_recipe">Torta salatacon speck e patate &#x2192;</a>
+								</div>
+							</div>
+
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-ricette-02.png" alt="ricette">
+								</div>
+								<div class="sidebar-product_right">
+
+									<a href="#" class="sidebar-product_recipe">Polenta e funghi speziati in umido &#x2192;</a>
+								</div>
+							</div>
+
+							<div class="sidebar-product_block">
+								<div class="sidebar-product_img">
+									<img src="img/sidebar-ricette-03.png" alt="ricette">
+								</div>
+								<div class="sidebar-product_right">
+									<a href="#" class="sidebar-product_recipe">Cestini di grano e bresaola &#x2192;</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="product-details_content product-details_content-wrapper">
+								<div class="pages-nav">
+									<a href="index.html">Home / </a>
+									<a href="#">Freschi tradizionali / </a>
+									<a href="#">Formaggi / </a>
+									<a href="#">Formaggi Stagionati / </a>
+									<a href="#">Valtellina Casera DOP stagionato </a>
+								</div>
+
+								<span class="category-content_heading">Scopri la nostra selezione di <strong>Formaggi</strong></span>
+								<p class="product-content_subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<div class="row">
+									<div class="col-md-5">
+										<div class="product-block_wrap">
+											<div class="product-block">
+												<button class="btn-like">
+													<i class="icon ico-heart"></i>
+												</button>
+												<div class="product-block_img">
+													<img src="img/product-details.png" alt="Alt" width="320" height="320">
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-md-7">
+										<div class="product-description">
+											<span class="product-content_heading"><strong>Valtellina Casera DOP stagionato </strong></span>
+											<span class="product-content_subheading">Latteria Sociale Valtellina</span>
+											<span class="product-content_title-info">Kg 0,500 ca</span>
+											<p class="product-content_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<div class="row product-description_counter">
+												<div class="col-md-7">
+													<div class="product_cart-nav">
+														<span class="cart-nav_price">27,10 € <strong>al kg</strong></span>
+														<div class="product_cart-nav-row">
+															<div class="product-cart_counter">
+																<button class="cart-counter_button">-</button>
+																<div class="cart-counter_summ">
+																	<span>500 gr</span>
+																	<i>1 pezzo</i>
+																</div>
+																<button class="cart-counter_button">+</button>
+															</div>
+															<button class="btn-purchase"><i class="icon ico-purchase"></i></button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="product-description_footer">
+														<div class="product-description_social">
+															<span>Share</span>
+															<div class="social-row description_social">
+																<a href="#"><i class="icon ico-facebook" aria-hidden="true"></i></a>
+																<a href="#"><i class="icon ico-twitter" aria-hidden="true"></i></a>
+																<a href="#"><i class="icon ico-instagram" aria-hidden="true"></i></a>
+																<a href="#"><i class="icon ico-google" aria-hidden="true"></i></a>
+															</div>
+														</div>
+														<div class="product-description_rating">
+															<p><span>7</span> Recensioni</p>
+															<div class="rate-row product-description_rate">
+																<button class="rate-star rated one-star"><i class="icon ico-star" aria-hidden="true"></i></button>
+																<button class="rate-star rated two-stars"><i class="icon ico-star" aria-hidden="true"></i></button>
+																<button class="rate-star rated three-stars"><i class="icon ico-star" aria-hidden="true"></i></button>
+																<button class="rate-star rated four-stars"><i class="icon ico-star" aria-hidden="true"></i></button>
+																<button class="rate-star five-stars"><i class="icon ico-star" aria-hidden="true"></i></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
 					</div>
 
+
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 tabs-wrap">
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#home">Descrizione</a></li>
+								<li><a data-toggle="tab" href="#menu1">Ingredienti</a></li>
+								<li><a data-toggle="tab" href="#menu2">Produttore</a></li>
+								<li><a class="last-tab" data-toggle="tab" href="#menu3">Recensioni</a></li>
+							</ul>
+
+							<div class="tab-content tab-content_wrap">
+								<div id="home" class="tab-pane fade in active ">
+									<strong class="tab-content_title">Lorem ipsum dolor sit amet</strong>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<strong class="tab-content_title">Lorem ipsum dolor sit amet</strong>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<strong class="tab-content_title">Lorem ipsum dolor sit amet</strong>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+								<div id="menu1" class="tab-pane fade">
+									<p>Ingredienti</p>
+								</div>
+								<div id="menu2" class="tab-pane fade">
+									<p>Produttore</p>
+								</div>
+								<div id="menu3" class="tab-pane fade">
+									<p>Recensioni</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
+
+
 			</div>
 		</main>
 		<!-- main content area END -->
@@ -395,13 +585,13 @@
 							</div>
 						</div>
 						<div class="footer-contacts_holder">
-							<p><strong>Company Name</strong></p>
-							<p>1568 Thunder Freeway, </p>
-							<p>Dirtdauber, New Jersey, 08771</p>
-							<p>Tel : 123456789</p>
-							<p class="last-paragraph">sales@yourcompany.com</p>
+							<p>Iperal S.p.a.</p>
+							<p>1Via La Rosa, 354 </p>
+							<p>Piantedo (SO) - Italia</p>
+							<p>Tel. 0342/606811</p>
+							<p class="last-paragraph">info@valtellinataste.com</p>
 						</div>
-						<div class="col-md-12 footer-social">
+						<div class="col-md-12 social-row">
 							<a href="#"><i class="icon ico-facebook" aria-hidden="true"></i></a>
 							<a href="#"><i class="icon ico-linkedin" aria-hidden="true"></i></a>
 							<a href="#"><i class="icon ico-twitter" aria-hidden="true"></i></a>
@@ -436,9 +626,9 @@
 						<p class="footer-mobile_row">Tel. 0342/606811</p>
 						<p class="footer-mobile_row">info@valtellinataste.com</p>
 						<div class="social-row">
-							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="#"><i class="icon ico-facebook" aria-hidden="true"></i></a>
+							<a href="#"><i class="icon ico-linkedin" aria-hidden="true"></i></a>
+							<a href="#"><i class="icon ico-twitter" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				</div>
@@ -456,6 +646,7 @@
 
 		<!-- scripts/libs START -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="libs/slick/slick.min.js"></script>
 		<script src="js/common.js"></script>
 		<!-- scripts/libs END -->

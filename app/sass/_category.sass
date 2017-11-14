@@ -29,6 +29,9 @@
 	a
 		&:hover
 			text-decoration: underline
+		&.active
+			color: #e38b08
+			font-weight: bold
 	.sidebar-links_header
 		position: relative
 		font-size: 1.8rem
@@ -43,6 +46,9 @@
 
 .sidebar-links_wrap
 	margin-bottom: 2.2rem
+	&.without-heading
+		.sidebar-links
+			margin-left: 2.5rem
 
 .sidebar-products_wrap
 	margin-bottom: 3rem
@@ -286,6 +292,8 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
+	flex-grow: 1
+	margin-right: 0.2rem
 
 .cart-counter_summ
 	span,
@@ -296,6 +304,7 @@
 		line-height: 1.1
 		font-weight: bold
 		font-style: normal
+		text-align: center
 	i
 		font-size: 1.2rem
 

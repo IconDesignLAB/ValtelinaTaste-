@@ -1,6 +1,7 @@
 @import 'fonts'
 @import 'media'
 @import 'vars'
+@import 'icons'
 
 *::-webkit-input-placeholder
   color: #aeaeae
@@ -844,27 +845,36 @@ h4
 			transform: scale(1.2)
 
 .rate-star
-  border: none
-  background-color: transparent
-  color: #e5e5e5
-  padding: 0
-  margin-right: 0.3rem
-  &:hover
-    color: #8c8c8c
-  &:last-child
-    margin-right: 0
+	border: none
+	background-color: transparent
+	color: #e5e5e5
+	padding: 0
+	margin-right: 0.3rem
+	&:hover
+		color: #8c8c8c
+		.icon
+			&:before
+				color: #8c8c8c
+	&:last-child
+		margin-right: 0
+	.icon
+		&:before
+			color: #e5e5e5
 
 .rated
-  color: #8c8c8c  
+	color: #8c8c8c 
+	.icon
+		&:before
+			color: #8c8c8c
 
 .rate-row
-  opacity: 0
-  transition: $slow-transition
+	opacity: 0
+	transition: $slow-transition
 
 .product-wrap
-  &:hover
-    .rate-row
-      opacity: 1
+	&:hover
+	.rate-row
+		opacity: 1
 
 .recipe-img
 	img
@@ -1042,23 +1052,27 @@ h5
   .last-paragraph
     margin-bottom: 2.5rem
 
-.footer-social
+.social-row
 	a
 		display: inline-block
-		width: 4.2rem
-		height: 4.2rem
 		background-color: $scandal
 		border-radius: 10rem
 		margin-right: 0.5rem
 		color: #fff
 		vertical-align: middle
 		text-align: center
-		font-size: 2.2rem
-		line-height: 4.2rem
+		font-size: 4rem
+		line-height: 0
 		transition: $slow-transition
 		&:hover
 			transform: scale(0.9)
 			background-color: #f99d1c
+			.icon
+				&:before
+					color: #f99d1c
+	.icon
+		&:before
+			font-size: 4rem
 	i
 		display: inline-block
 	@include md
@@ -1220,7 +1234,7 @@ h5
 	img
 		display: inline-block
 		margin-bottom: 1rem
-	.footer-social
+	.social-row
 		margin-top: 1.5rem
 		margin-bottom: 2.5rem
 		border-bottom: 0
@@ -1325,115 +1339,6 @@ h5
 	@include lg
 		display: block
 
-// icons
-.icon
-	display: inline-block
-	font-family: $icon-font
-	font-style: normal
-	font-weight: normal
-	line-height: 1
-	font-variant: normal
-	text-transform: none
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
-
-.ico-basket
-	&:before
-		content: '\e90e'
-		display: block
-		color: #000
-		opacity: 0.3
-		font-size: 1.8rem
-
-.ico-contact
-	&:before
-		content: '\e929'
-		display: block
-		color: #000
-		font-size: 2.5rem
-		opacity: 0.3
-
-.ico-search
-	&:before
-		content: '\e925'
-		display: block
-		color: #fff
-		font-size: 2rem
-
-.ico-heart
-	&:before
-		content: '\e928'
-		display: block
-		color: #000
-		font-size: 2.5rem
-
-
-/*nav icons*/
-.ico-nav
-	margin-right: 0.9rem
-	width: 4.1rem
-	height: 4.1rem
-
-.ico-products
-	&:before
-		content: '\e904'
-		display: block
-		color: #5760aa
-		font-size: 4.1rem
-		background-color: #fff
-		border-radius: 100rem
-
-.ico-slider-arrow
-	&:before
-		content: '\e92b'
-		display: block
-		color: #b4d2d0
-		font-size: 4.1rem
-		background-color: transparent
-		border-radius: 100rem
-
-.ico-fresh
-	&:before
-		content: '\e905'
-		display: block
-		color: #669551
-		font-size: 4.1rem
-		background-color: #fff
-		border-radius: 100rem
-
-.ico-pantry
-	&:before
-		content: '\e902'
-		display: block
-		color: #79c2bf
-		font-size: 4.1rem
-		background-color: #fff
-		border-radius: 100rem
-
-.ico-wine
-	&:before
-		content: '\e901'
-		display: block
-		color: #9b0759
-		font-size: 4.1rem
-		background-color: #fff
-		border-radius: 100rem
-
-.ico-recipe
-	&:before
-		content: '\e903'
-		display: block
-		color: #f39100
-		font-size: 4.1rem
-		background-color: #fff
-		border-radius: 100rem
-
-.ico-purchase
-	&:before
-		content: '\e90d'
-		display: block
-		color: #fff
-		font-size: 2.5rem
-
 
 @import '_category'
+@import '_product-details'

@@ -768,8 +768,8 @@ h3
 .sale-mark
 	font-size: 1rem
 	position: absolute
-	top: -0.1rem
-	left: -0.7rem
+	top: 0
+	left: 0
 	width: 6.6em
 	height: 6.6em
 	border: 0.5em solid #aaafe1
@@ -779,6 +779,7 @@ h3
 	align-items: center
 	justify-content: space-around
 	transition: $transition
+	display: none
 	span
 		display: inline-block
 		font-size: 1.6em
@@ -787,6 +788,9 @@ h3
 		color: #aaafe1
 		font-weight: 700
 		font-family: $default-font
+	&.active
+		display: block
+		display: flex
 	@include lg
 		width: 4.8em
 		height: 4.8em
@@ -797,13 +801,14 @@ h3
 			
 
 h4
-  color: #5b3042
-  font-size: 1.6rem
-  line-height: 1.1
-  font-family: $default-font
-  text-transform: capitalize
-  font-weight: bold
-  margin-bottom: 0.7rem
+	display: block
+	color: #5b3042
+	font-size: 1.6rem
+	line-height: 1.1
+	font-family: $default-font
+	text-transform: capitalize
+	font-weight: bold
+	margin-bottom: 0.7rem
 
 .product-slider_subheading
 	display: block
@@ -813,25 +818,27 @@ h4
 	margin-bottom: 1.7rem
 
 .btn-order
-  display: inline-block
-  font-size: 1.4rem
-  line-height: 1
-  margin-bottom: 1.5rem
-  background-color: #f99d1c
-  border-radius: 0.7rem
-  padding: 0.8rem 1.8rem
-  font-family: $default-font
-  border: none
-  color: #fff
-  text-transform: uppercase
-  &:hover
-    background-color: #faa834
-  &:active
-    background-color: #fc980b
-
-  span
-    font-weight: 700
-    display: block
+	display: block
+	font-size: 1.4rem
+	line-height: 1
+	margin: 0 auto 1.5rem
+	max-width: 12.5rem
+	background-color: #f99d1c
+	border-radius: 0.7rem
+	text-align: center
+	vertical-align: middle
+	padding: 0.8rem 1.5rem
+	font-family: $default-font
+	border: none
+	color: #fff
+	text-transform: uppercase
+	&:hover
+		background-color: #faa834
+	&:active
+		background-color: #fc980b
+	span
+		font-weight: 700
+		display: block
 
 .product-slider_box-bottom
 	text-align: center
@@ -875,6 +882,7 @@ h4
 	transition: $slow-transition
 
 .product-wrap
+	text-align: center
 	&:hover
 	.rate-row
 		opacity: 1

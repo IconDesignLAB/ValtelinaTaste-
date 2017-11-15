@@ -34,6 +34,33 @@
 ]
 });
 
+$('.more-product_slider').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	arrows: true,
+	autoplay: false,
+	prevArrow: '<button class="slick-arrow slick-prev"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
+	nextArrow: '<button class="slick-arrow slick-next"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
+	responsive: [
+		{
+			breakpoint: 980,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true
+			}
+		}
+	]
+});
+
 // toggling class to drop-down nav
 
 document.getElementById('footer-nav-1').onclick = function() {

@@ -71,7 +71,6 @@ body
 html
 	font-size: 10px
 	@include xl
-		font-size: 8px
 	@include lg
 		font-size: 10px
 
@@ -728,6 +727,12 @@ h3
 	.ico-slider-arrow
 		&:before
 			font-size: 6rem
+		&:hover
+			&:before
+				color: #98bfbc
+		&:active
+			&:before
+				color: #87b4b1
 	@include lg
 		.ico-slider-arrow
 			&:before
@@ -1024,15 +1029,16 @@ h5
   padding: 0
 
 .recipe-read-more
-  color: #f9a128
-  font-size: 1.2rem
-  font-family: $default-font
-  font-weight: bold
-  text-transform: uppercase
-  &:hover,
-  &:active,
-  &:focus
-    color: #ff9400
+	color: #f9a128
+	font-size: 1.2rem
+	font-family: $default-font
+	font-weight: bold
+	text-transform: uppercase
+	&:hover,
+	&:active,
+	&:focus
+		color: #ff9400
+		text-decoration: underline
 
 /* footer area */
 .footer-holder
@@ -1114,8 +1120,8 @@ h5
 		line-height: 1.1
 		padding: 0 0.5rem
 		color: #9d9d9d
-	&:hover
-		color: #f99d1c
+		&:hover
+			color: #f99d1c
 	@include md
 		ul
 			float: none
@@ -1158,8 +1164,8 @@ h5
 	a
 		font-weight: bold
 		color: #707170
-	&:hover, &:active, &:focus
-		color: #000
+		&:hover, &:active, &:focus
+			color: #000
 
 .footer-nav
   h3
@@ -1351,5 +1357,6 @@ h5
 		display: block
 
 
-@import '_category'
-@import '_product-details'
+@import 'category'
+@import 'product-details'
+@import 'cart'

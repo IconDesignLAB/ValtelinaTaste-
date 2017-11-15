@@ -87,5 +87,10 @@ $('.btn-mobile-nav').click(function() {
 	$('.main-nav_hide').toggleClass('active');
 })
 
+$('.btn-log-reg.btn-user').click(function() {
+	$(this).toggleClass('active');
+	$('.area-client_drop').toggleClass('active');
+})
+
 
 

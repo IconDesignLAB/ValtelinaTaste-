@@ -4,7 +4,18 @@ $icon-font: 'icons'
 
 $text-color: #616161
 $blue: #b5d2d0
+
 $orange: #f99d1c
+$orange-hover: #f9a734
+$orange-active: #ff9500
+
+$red: #e94640
+$red-hover: #f74c46
+$red-active: #d7413c
+
+/*transition*/
+$slow-transition: all .3s ease 0.15s
+$transition: all .15s ease 0.05s
 
 /*Font weight*/
 $light: 300
@@ -12,9 +23,23 @@ $regular: 400
 $medium: 500
 $bold: 700
 
-/*transition*/
-$slow-transition: all .3s ease 0.15s
-$transition: all .15s ease 0.05s
-
 /*border radius*/
 $radius: 0.5rem
+
+.btn-red
+	background-color: $red
+	color: #fff
+	transition: all .1s ease .05s
+	&:hover
+		background-color: $red-hover
+	&:active
+		background-color: $red-active
+
+.btn-orange
+	background-color: $orange
+	color: #fff
+	transition: all .1s ease .05s
+	&:hover
+		background-color: $orange-hover
+	&:active
+		background-color: $orange-active

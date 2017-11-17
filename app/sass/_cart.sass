@@ -2,6 +2,7 @@
 	padding-top: 3.7rem
 	padding-bottom: 3rem
 	background-color: #fff
+	margin-bottom: 1.5rem
 
 .log-reg
 	position: relative
@@ -221,6 +222,8 @@
 	background-image: none
 	-webkit-appearance: none
 	cursor: pointer
+	&:focus
+		border-color: #9f9f9f
 
 .order-amount_weight,
 .order-amount_cost
@@ -246,6 +249,10 @@
 .btn-cart-delete
 	background-color: transparent
 	border: none
+	&:hover
+		.icon
+			&:before
+				color: #848484
 
 .order-product_footer
 	padding: 3rem 0
@@ -309,3 +316,37 @@
 		font-weight: bold
 		color: #3c3c3c
 		margin-bottom: 2.3rem
+
+.order-summary_footer
+	input
+		border: 0.1rem solid #bab9b2
+		background-color: #e7e7de
+		border-radius: none
+		margin-right: 0.3rem
+		height: 3.9rem
+		min-width: 15.6rem
+		padding-left: 1.5rem
+		font-size: 1.5rem
+		&:focus
+			border: 0.1rem solid #000
+		@include md
+			flex-grow: 1
+	button
+		display: inline-block
+		font-size: 1.2rem
+		font-weight: bold
+		min-width: 6.8rem
+		background-color: #f89d51
+		color: #fff
+		text-align: center
+		padding: 0 0.9rem
+		height: 3.9rem
+		border: none
+		text-transform: uppercase
+		
+.order-summary_input
+	display: flex
+	align-items: center
+
+.cart-page_slider-wrap
+	margin-bottom: 6rem

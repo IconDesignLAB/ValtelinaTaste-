@@ -207,331 +207,72 @@
 		<!-- header area END -->
 
 		<!-- main content area START -->
-		<main class="cart-page">
-			<div class="container cart-page_wrap">
-				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="compleatance-row">
-								<div class="compleatance-step active">
-									<div class="compleatance-check">
-										<i class="icon ico-check"></i>
-									</div>
-									<p class="compleatance-text">Riepilogo  <strong>carrello</strong></p>
-									<div class="compleatance-line"></div>
-								</div>
-								<div class="compleatance-step">
-									<div class="compleatance-check">
-										<i class="icon ico-check"></i>
-									</div>
-									<p class="compleatance-text">dettagli <strong>consegna</strong></p>
-									<div class="compleatance-line"></div>
-								</div>
-								<div class="compleatance-step">
-									<div class="compleatance-check">
-										<i class="icon ico-check"></i>
-									</div>
-									<p class="compleatance-text"><strong>pagamento</strong></p>
-									<div class="compleatance-line"></div>
-								</div>
-								<div class="compleatance-step">
-									<div class="compleatance-check">
-										<i class="icon ico-check"></i>
-									</div>
-									<p class="compleatance-text"><strong>conferma</strong></p>
-									<div class="compleatance-line"></div>
-								</div>
+		<main class="login-page">
+			<div class="container login-wrap">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-sm-offset-0 col-md-offset-2 auth-block_col">
+						<div class="auth-block auth-login">
+							<span class="auth-block_title">ACCEDI</span>
+							<div class="auth-block_info">
+								<span><strong>Sei già nostro cliente?</strong></span>
+								<span>Se hai un account accedi tramite email e password</span>
+							</div>
+							<form class="auth-form">
+								<input type="text" placeholder="E-Mail">
+								<input type="password" placeholder="Password">
+								<a class="forgot-pass">Hai dimenticato la password?</a>
 
+								<label class="auth-check_row">
+									<input type="checkbox">
+									<span class="checkmark"></span>
+									Ricordami su questo dispositivo
+								</label>
+								<button type="submit" class="btn-auth btn-orange">conferma</button>
+							</form>
+							<p class="auth-text">In aternativa accedi con il tuo account social</p>
+							<div class="auth-social">
+								<button class="btn-auth-social btn-auth-fb"></button>
+								<button class="btn-auth-social btn-auth-google"></button>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<span class="order_title">dettagli <strong>carrello</strong></span>
 
-							<div class="order-product_row">
-								<div class="order-product_left">
-									<div class="order-img_hold">
-										<img src="img/product-catatlog-01.jpg" alt="Alt">
-									</div>
-									<div class="order-product_descr">
-										<p class="order-product_descr-title">Tipo di prodotto</p>
-										<p class="order-product_descr-subtitle">Descrizione </p>
-									</div>
-								</div>
-								<div class="order-product_right">
-									<div class="select-quant_wrap">
-										<select class="quantity-select" name="#" id="#">
-											<option value="1">1</option>
-											<option value="1">1</option>
-											<option value="1">1</option>
-											<option value="1">1</option>
-										</select>
-									</div>
-									<div class="order-amount">
-										<span class="order-amount_weight">250 gr</span>
-										<span class="order-amount_cost">22,10 € al Kg</span>
-									</div>
-									<span class="cart-nav_price order-summary">5,40 €</span>
-									<button class="btn-cart-delete"><i class="icon ico-delete"></i></button>
-								</div>
-
+					<div class="col-lg-4 col-md-4 col-sm-6 col-sm-offset-0 auth-block_col">
+						<div class="auth-block auth-registration">
+							<span class="auth-block_title">registrati</span>
+							<div class="auth-block_info">
+								<span><strong>Sei un nuovo cliente?</strong></span>
+								<span>Registrati, in pochi istanti creerai il tuo account!</span>
 							</div>
-
-							<div class="order-product_row">
-								<div class="order-product_left">
-									<div class="order-img_hold">
-										<img src="img/product-02.jpg" alt="Alt">
-									</div>
-									<div class="order-product_descr">
-										<p class="order-product_descr-title">Tipo di prodotto</p>
-										<p class="order-product_descr-subtitle">Descrizione </p>
-									</div>
-								</div>
-								<div class="order-product_right">
-									<div class="select-quant_wrap">
-										<select class="quantity-select" name="#" id="#">
-											<option value="1">1</option>
-											<option value="1">1</option>
-											<option value="1">1</option>
-											<option value="1">1</option>
-										</select>
-									</div>
-									<div class="order-amount">
-										<span class="order-amount_weight">250 gr</span>
-										<span class="order-amount_cost">22,10 € al Kg</span>
-									</div>
-									<span class="cart-nav_price order-summary">12,10 €</span>
-									<button class="btn-cart-delete"><i class="icon ico-delete"></i></button>
+							<form class="auth-form">
+								<input type="text" placeholder="E-Mail *" required>
+								<input type="password" placeholder="Password *" required>
+								<a class="auth-notification">* campi obbligatori</a>
+								<div class="auth-registration_checkboxes">
+									<label class="auth-check_row">
+										<input type="checkbox">
+										<span class="checkmark"></span>
+										Privacy
+									</label>
+									<label class="auth-check_row">
+										<input type="checkbox">
+										<span class="checkmark"></span>
+										Lorem ipsum dolor sit amet
+									</label>
 								</div>
 
+								<button type="submit" class="btn-auth btn-red">crea un account</button>
+							</form>
+							<p class="auth-text">In aternativa <strong>registrati</strong> con il tuo account social</p>
+							<div class="auth-social">
+								<button class="btn-auth-social btn-auth-fb"></button>
+								<button class="btn-auth-social btn-auth-google"></button>
 							</div>
-
-							<div class="order-product_row">
-								<div class="order-product_left">
-									<div class="order-img_hold">
-										<img src="img/product-01.jpg" alt="Alt">
-									</div>
-									<div class="order-product_descr">
-										<p class="order-product_descr-title">Tipo di prodotto</p>
-										<p class="order-product_descr-subtitle">Descrizione </p>
-									</div>
-								</div>
-								<div class="order-product_right">
-									<div class="select-quant_wrap">
-										<select class="quantity-select" name="#" id="#">
-											<option value="1">1</option>
-											<option value="1">1</option>
-											<option value="1">1</option>
-											<option value="1">1</option>
-										</select>
-									</div>
-									<div class="order-amount">
-										<span class="order-amount_weight">250 gr</span>
-										<span class="order-amount_cost">15,00 € al Kg</span>
-									</div>
-									<span class="cart-nav_price order-summary">3,75 €</span>
-									<button class="btn-cart-delete"><i class="icon ico-delete"></i></button>
-								</div>
-
-							</div>
-
-							<div class="row order-product_footer">
-								<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-									<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod.</p>
-								</div>
-								<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-									<button class="btn-order-process btn-red">procedi</button>
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="order-summary_wrap">
-						<span class="order_title orange">riepilogo <strong>ordine</strong></span>
-						<div class="order-summary_content">
-							<ul class="order-summary_list">
-								<li>
-									<span>Totale articoli</span>
-									<span>21,25 €</span>
-								</li>
-								<li>
-									<span>Di cui a peso</span>
-									<span>9,15 €</span>
-								</li>
-								<li>
-									<span>Sconto</span>
-									<span>00,00 €</span>
-								</li>
-								<li>
-									<span>Spese consegna</span>
-									<span>00,00 €</span>
-								</li>
-								<li class="last-item">
-									<span>Totale ordine</span>
-									<span>21,25 €</span>
-								</li>
-							</ul>
 
-							<div class="order-summary_footer">
-								<p>Utilizza un codice sconto</p>
-								<form class="order-summary_input" action="">
-									<input type="text">
-									<button class="btn-orange">Applica</button>
-								</form>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
 			</div>
-
-			<div class="container product-slider_container">
-				<div class="row product-slider_wrap">
-					<div class="col-md-12">
-						<h3>recentemente hai acquistato anche:</h3
-					</div>
-					<div class="col-md-12 product-slider">
-						<div class="product-wrap col-md-3 col-sm-6">
-							<div class="product-slider_box">
-								<div class="sale-mark">
-									<span>Sale!</span>
-								</div>
-								<img src="img/product-01.jpg" alt="Prodotti">
-								<button class="btn-like">
-									<i class="icon ico-heart"></i>
-								</button> 
-							</div>
-							<h4>Prodotto Uno</h4>
-							<div class="product_cart-nav">
-								<span class="cart-nav_price">5,7 € <strong>al kg</strong></span>
-								<div class="product_cart-nav-row">
-									<div class="product-cart_counter">
-										<button class="cart-counter_button">-</button>
-										<div class="cart-counter_summ">
-											<span>1 pz</span>
-										</div>
-										<button class="cart-counter_button">+</button>
-									</div>
-									<button class="btn-purchase"><i class="icon ico-purchase"></i></button>
-								</div>
-							</div>
-						</div>
-						
-						<div class="product-wrap col-md-3 col-sm-6">
-							<div class="product-slider_box">
-								<div class="sale-mark active">
-									<span>Sale!</span>
-								</div>
-								<img src="img/product-02.jpg" alt="Prodotti">
-								<button class="btn-like">
-									<i class="icon ico-heart"></i>
-								</button> 
-							</div>
-							<h4>Prodotto Due</h4>
-							<div class="product_cart-nav">
-								<span class="cart-nav_price">15,10 € <strong>al kg</strong></span>
-								<div class="product_cart-nav-row">
-									<div class="product-cart_counter">
-										<button class="cart-counter_button">-</button>
-										<div class="cart-counter_summ">
-											<span>1 pz</span>
-										</div>
-										<button class="cart-counter_button">+</button>
-									</div>
-									<button class="btn-purchase"><i class="icon ico-purchase"></i></button>
-								</div>
-							</div>
-						</div>
-						
-						<div class="product-wrap col-md-3 col-sm-6">
-							<div class="product-slider_box">
-								<div class="sale-mark">
-									<span>Sale!</span>
-								</div>
-								<img src="img/product-05.jpg" alt="Prodotti">
-								<button class="btn-like">
-									<i class="icon ico-heart"></i>
-								</button> 
-							</div>
-							<h4>Prodotto Tre</h4>
-							<div class="product_cart-nav">
-								<span class="cart-nav_price">24,30 € <strong>al kg</strong></span>
-								<div class="product_cart-nav-row">
-									<div class="product-cart_counter">
-										<button class="cart-counter_button">-</button>
-										<div class="cart-counter_summ">
-											<span>600 gr</span>
-											<i>1 pezzo</i>
-										</div>
-										<button class="cart-counter_button">+</button>
-									</div>
-									<button class="btn-purchase"><i class="icon ico-purchase"></i></button>
-								</div>
-							</div>
-						</div>
-						
-						<div class="product-wrap col-md-3 col-sm-6">
-							<div class="product-slider_box">
-								<div class="sale-mark active">
-									<span>Sale!</span>
-								</div>
-								<img src="img/product-04.jpg" alt="Prodotti">
-								<button class="btn-like">
-									<i class="icon ico-heart"></i>
-								</button> 
-							</div>
-							<h4>Prodotto Quattro</h4>
-							<div class="product_cart-nav">
-								<span class="cart-nav_price">4,3 € <strong>al kg</strong></span>
-								<div class="product_cart-nav-row">
-									<div class="product-cart_counter">
-										<button class="cart-counter_button">-</button>
-										<div class="cart-counter_summ">
-											<span>1 pz</span>
-										</div>
-										<button class="cart-counter_button">+</button>
-									</div>
-									<button class="btn-purchase"><i class="icon ico-purchase"></i></button>
-								</div>
-							</div>
-						</div>
-						
-						<div class="product-wrap col-md-3 col-sm-6">
-							<div class="product-slider_box">
-								<div class="sale-mark active">
-									<span>Sale!</span>
-								</div>
-								<img src="img/product-02.jpg" alt="Prodotti">
-								<button class="btn-like">
-									<i class="icon ico-heart"></i>
-								</button> 
-							</div>
-							<h4>Prodotto Due</h4>
-							<div class="product_cart-nav">
-								<span class="cart-nav_price">15,10 € <strong>al kg</strong></span>
-								<div class="product_cart-nav-row">
-									<div class="product-cart_counter">
-										<button class="cart-counter_button">-</button>
-										<div class="cart-counter_summ">
-											<span>1 pz</span>
-										</div>
-										<button class="cart-counter_button">+</button>
-									</div>
-									<button class="btn-purchase"><i class="icon ico-purchase"></i></button>
-								</div>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-
 		</main>
 		<!-- main content area END -->
 

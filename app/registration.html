@@ -6,7 +6,7 @@
 		<meta name="description" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>Login</title>
+		<title>Registration</title>
 
 	</head>
 
@@ -171,7 +171,7 @@
 			</div>
 		</div>
 
-		<div class="container nav-container">
+		<div class="container nav-container nav-registration-page">
 			<div class="container-inner main-top">
 				<div class="row main-nav_hide">
 					<div class="col-md-12">
@@ -208,70 +208,52 @@
 
 		<!-- main content area START -->
 		<main class="login-page">
-			<div class="container login-wrap">
+			<div class="container registration-wrap">
 				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 col-sm-offset-0 col-md-offset-2 auth-block_col">
-						<div class="auth-block auth-login">
-							<span class="auth-block_title">ACCEDI</span>
-							<div class="auth-block_info">
-								<span><strong>Sei già nostro cliente?</strong></span>
-								<span>Se hai un account accedi tramite email e password</span>
-							</div>
-							<form class="auth-form">
-								<input class="form-field" type="text" placeholder="E-Mail">
-								<input class="form-field" type="password" placeholder="Password">
-								<a class="forgot-pass">Hai dimenticato la password?</a>
-
-								<label class="auth-check_row">
-									<input type="checkbox">
-									<span class="checkmark"></span>
-									Ricordami su questo dispositivo
-								</label>
-								<button type="submit" class="btn-auth btn-orange">conferma</button>
-							</form>
-							<p class="auth-text">In aternativa accedi con il tuo account social</p>
-							<div class="auth-social">
-								<button class="btn-auth-social btn-auth-fb"></button>
-								<button class="btn-auth-social btn-auth-google"></button>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6 col-sm-offset-0 auth-block_col">
-						<div class="auth-block auth-registration">
-							<span class="auth-block_title">registrati</span>
-							<div class="auth-block_info">
-								<span><strong>Sei un nuovo cliente?</strong></span>
-								<span>Registrati, in pochi istanti creerai il tuo account!</span>
-							</div>
-							<form class="auth-form">
-								<input class="form-field" type="text" placeholder="E-Mail *" required>
-								<input class="form-field" type="password" placeholder="Password *" required>
-								<a class="auth-notification">* campi obbligatori</a>
-								<div class="auth-registration_checkboxes">
-									<label class="auth-check_row">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-										Privacy
-									</label>
-									<label class="auth-check_row">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-										Lorem ipsum dolor sit amet
-									</label>
-								</div>
-
-								<button type="submit" class="btn-auth btn-red">crea un account</button>
-							</form>
-							<p class="auth-text">In aternativa <strong>registrati</strong> con il tuo account social</p>
-							<div class="auth-social">
-								<button class="btn-auth-social btn-auth-fb"></button>
-								<button class="btn-auth-social btn-auth-google"></button>
-							</div>
-						</div>
+					<div class="col-md-10 col-md-offset-1">
+						<span class="reg-block_title">ACCECOMPLETA la <strong>REGISTRAZIONEDI</strong></span>
+						<p class="reg-block_subtitle">Registrati per entrare nel mondo <strong>Valtellina Taste</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 registration-container">
+						<form class="auth-form">
+							<div class="auth-block_info">
+								<span><strong>Dati personali</strong></span>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<input class="form-field" type="text" placeholder="Nome *">
+								</div>
 
+								<div class="col-md-3">
+									<input class="form-field" type="text" placeholder="Cognome *">
+								</div>
+
+								<div class="col-md-6">
+									<input class="form-field" type="text" placeholder="Codice Fiscale *">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<input class="form-field" type="text" placeholder="Data di nascita *">
+								</div>
+
+								<div class="col-md-3">
+									<input class="form-field" type="text" placeholder="Cellulare *">
+								</div>
+
+								<div class="col-md-6">
+									<input class="form-field" type="text" placeholder="Mail *">
+								</div>
+							</div>
+							<div class="auth-block_info">
+								<span><strong>Indirizzo Valido per la spedizione dell’ordine /strong></span>
+							</div>
+						</form>
+
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- main content area END -->

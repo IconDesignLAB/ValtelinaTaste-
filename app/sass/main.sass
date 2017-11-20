@@ -99,6 +99,7 @@ body
 		padding: 0
 	&.slider-container
 		padding: 15px
+		padding-top: 10px
 	&.product-slider_container
 		background-color: transparent
 	@include lg
@@ -129,7 +130,19 @@ body
 .btn-language
 	display: inline-block
 	color: $text-color
-	border-bottom: 0.1rem solid #d3d3d3
+	position: relative
+	margin-right: 1.4rem
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		bottom: -0.5rem
+		width: 100%
+		height: 0.1rem
+		background-image: linear-gradient(to left, #d3d3d3, #d3d3d3)
+		background-size: 100% 0.1rem
+		background-repeat: no-repeat
+		background-position: 0 100%
 	img
 		display: inline-block
 	span
@@ -184,21 +197,21 @@ body
 		color: #fff
 
 .btn-log-reg
-  display: inline-block
-  background-color: $blue
-  color: #fff
-  text-transform: uppercase
-  font-size: 1.2rem
-  font-weight: 700
-  border-radius: 0.3rem
-  line-height: 1.7rem
-  padding: 0.7rem 0.7rem 0.5rem
-  &:hover
-    color: #fff
-    background-color: #b9d6d4
-  &:active, &:focus
-    background-color: #acc6c4
-    color: #fff
+	display: inline-block
+	background-color: $blue
+	color: #fff
+	text-transform: uppercase
+	font-size: 1.2rem
+	font-weight: 700
+	border-radius: 0.3rem
+	line-height: 1.7rem
+	padding: 0.7rem 0.7rem 0.5rem
+	&:hover
+		color: #fff
+		background-color: #b9d6d4
+	&:active, &:focus
+		background-color: #b9d6d4
+		color: #fff
 
 .log-reg
   display: flex
@@ -244,7 +257,7 @@ body
 
 .cart-drop_price
 	display: block
-	padding: 1.7rem 2.2rem 1.3rem
+	padding: 1.3rem 2.7rem 0.8rem 2rem
 	background-color: #f39100
 	display: flex
 	justify-content: space-between
@@ -255,6 +268,9 @@ body
 		font-size: 1.4rem
 		text-transform: uppercase
 		color: #fff
+	&>strong
+		font-size: 2rem
+		line-height: 1
 
 .cart-drop_footer
 	background-color: $blue
@@ -274,7 +290,7 @@ body
 		color: #614637
 	
 .cart-product_title
-	padding-right: 2.2rem
+	padding-right: 3rem
 	display: flex
 	justify-content: space-between
 	align-items: center
@@ -282,6 +298,7 @@ body
 		display: inline-block
 		font-family: $default-font
 		font-size: 1.2rem
+		line-height: 1
 		text-transform: uppercase
 		color: #6f6f6f
 	span
@@ -291,16 +308,20 @@ body
 		img
 			width: 100%
 			height: auto
+	.icon
+		&:before
+			color: #624639
+			font-size: 1.8rem
 
 .cart-drop_content
-	padding: 0.8rem 2.2rem
+	padding: 1rem 2.2rem
 
 .cart-product_row
 	display: block
 	width: 100%
 	border: none
 	background: none
-	padding: 2rem 0
+	padding: 1.55rem 0
 	border-bottom: 0.1rem dashed #d1d1d1
 	border-top: 0.1rem dashed #d1d1d1
 	&:first-child
@@ -312,7 +333,7 @@ body
 	display: flex
 	justify-content: space-between
 	align-items: center
-	margin-top: 1.5rem
+	margin-top: 1rem
 
 .cart-product_info-name
 	display: inline-block
@@ -329,7 +350,7 @@ body
 
 .cart-drop_title
 	display: block
-	padding: 2.4rem 2.2rem 1.6rem
+	padding: 2.1rem 2.2rem 1.1rem
 	span
 		display: inline-block
 		color: #624639
@@ -357,7 +378,7 @@ body
     color: #fff
 
 .main-top
-	padding-top: 3rem
+	padding-top: 3.2rem
 	background-color: #fff
 	@include lg
 		padding-top: 0
@@ -376,7 +397,7 @@ body
 		display: block
 
 .main-nav
-	padding-bottom: 1.1rem
+	padding-bottom: 1.7rem
 	border-bottom: 1px solid #e6e6e6
 	transition: $slow-transition
 	display: flex
@@ -430,7 +451,7 @@ body
 .slider-row
 	overflow: hidden
 	background-color: #f8f7ee
-	padding: 1.2rem 0 1.5rem
+	padding: 1.3rem 0 1.5rem
 	@include lg
 		padding-bottom: 0
 		margin: 0
@@ -475,8 +496,8 @@ body
 	&:before
 		content: ''
 		position: absolute
-		width: 38em
-		height: 38em
+		width: 41em
+		height: 37em
 		left: 0
 		bottom: 0
 		background: rgba(0,0,0,.5)
@@ -488,22 +509,22 @@ body
 
 .slide-box_holder
 	max-width: 23em
-	margin: 0 0 3.9em 3.6em
+	margin: 0 0 3em 4.3em
 	position: relative
 	z-index: 2
 
 .slide-box_heading
 	font-family: "HelveticaNeueLTStdHv"
 	font-size: 4.7em
-	line-height: 1
-	margin-bottom: 0.5em
+	line-height: 0.95
+	margin-bottom: 0.2em
 	span
 		font-family: "HelveticaNeueLTStdLt"
 	@include sm
 	
 .slide-box_subhead
 	font-size: 1.6em
-	line-height: 1.5
+	line-height: 1.3
 
 .top-banner_heading
 	position: absolute
@@ -512,12 +533,12 @@ body
 	right: 0
 	width: 100%
 	text-transform: uppercase
-	padding: 0.7rem 1.2rem
+	padding: 0.5rem 1.2rem
 	background-color: rgba(249,157,58,.8)
 	color: #fff
 	transition: $slow-transition
 	font-size: 1.5rem
-	line-height: 1.7rem
+	line-height: 1
 	@include lg
 		text-align: center
 
@@ -594,7 +615,7 @@ body
 h3
 	color: #675751
 	font-size: 1.8rem
-	margin-bottom: 2rem
+	margin-bottom: 1.9rem
 	text-transform: uppercase
 	font-family: $default-font
 	font-weight: 700
@@ -603,13 +624,14 @@ h3
 		font-size: 1.5rem
 
 .offer-box
-	min-height: 22rem
-	margin-bottom: 1.5rem
+	min-height: 21rem
 	background-color: #fff
 	p
 		font-size: 1.6rem
 		color: $text-color
 		font-family: $default-font
+	@include md
+		margin-bottom: 1.5rem
 
 .col-offer
 	@include lg
@@ -636,7 +658,7 @@ h3
 	p
 		line-height: 1.5
 	@include md
-	padding: 1.5rem
+		padding: 1.5rem
 
 .offer-right_hold
 	overflow: hidden
@@ -674,7 +696,7 @@ h3
   color: $orange
   font-family: $default-font
   font-size: 1.6rem
-  line-height: 1.5
+  line-height: 1.1
   text-transform: uppercase
   display: block
   font-weight: 700
@@ -687,8 +709,8 @@ h3
   text-align: right
   text-transform: capitalize
   font-weight: 700
-  margin-top: 3rem
-  margin-right: 3rem
+  margin-top: 3.2rem
+  margin-right: 4rem
   i
     transition: $transition
   &:hover,
@@ -717,16 +739,16 @@ h3
 		line-height: 0
 		z-index: 100
 	.slick-prev
-		left: -4rem
+		left: 0
 		right: auto
-		transform: rotate(180deg)
+		transform: rotate(180deg) translateX(65%)
 	.slick-next
 		left: auto
-		right: -4rem
-		transform: rotate(0)
+		right: 0
+		transform: rotate(0) translateX(65%)
 	.ico-slider-arrow
 		&:before
-			font-size: 6rem
+			font-size: 7rem
 		&:hover
 			&:before
 				color: #98bfbc
@@ -755,7 +777,7 @@ h3
 	border: 0.1rem solid rgba(0, 0, 0, 0.05)
 	box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1)
 	margin-top: 0.5rem
-	margin-bottom: 3.2rem
+	margin-bottom: 2.8rem
 	text-align: center
 	height: 25rem
 	position: relative
@@ -776,7 +798,7 @@ h3
 	top: 0
 	left: 0
 	width: 6.6em
-	height: 6.6em
+	height: 6em
 	border: 0.5em solid #aaafe1
 	border-radius: 10em
 	display: flex
@@ -813,20 +835,20 @@ h4
 	font-family: $default-font
 	text-transform: capitalize
 	font-weight: bold
-	margin-bottom: 0.7rem
+	margin-bottom: 0
 
 .product-slider_subheading
 	display: block
 	text-align: center
 	font-size: 1.3rem
 	color: #979b97
-	margin-bottom: 1.7rem
+	margin-bottom: 1.4rem
 
 .btn-order
 	display: block
 	font-size: 1.4rem
 	line-height: 1
-	margin: 0 auto 1.5rem
+	margin: 0 auto 1.2rem
 	max-width: 12.5rem
 	background-color: $orange
 	border-radius: 0.7rem
@@ -913,18 +935,19 @@ h4
 	padding: 0
 	display: flex
 	align-items: stretch
-	margin-bottom: 4rem
 	flex-wrap: wrap
+	padding-top: 3.2rem
+	padding-bottom: 2.1rem
 
-.recipe-wrap
-	max-width: 50rem
-	margin: 0 auto
+.recipe-wrap,
+.recipes-right_wrap
+	h3
+		margin-bottom: 2.4rem
 
 .recipes-right_wrap,
 .recipes-left_wrap
 	background-color: #fff
-	padding-top: 3.4rem
-	padding-bottom: 3.4rem
+
 	overflow: hidden
 	margin-bottom: 1.5rem
 	@include lg
@@ -948,12 +971,12 @@ h5
 .recipe-paragraph
 	p
 		margin-bottom: 1.9rem
-		width: 95%
+		width: 100%
 		line-height: 1.2
 		font-size: 1.6rem
 		color: $text-color
 	.last-paragraph
-		margin-bottom: 4.6rem
+		margin-bottom: 4.5rem
 	@include lg
 		padding: 0 30px
 		h5
@@ -1045,23 +1068,24 @@ h5
 	width: 100%
 	background: #fff url('../img/footer-bg.jpg') no-repeat 0 0
 	background-size: 100% auto
+	margin-top: 6rem
 	@include lg
 		display: none
 .footer
-  padding-top: 6.1rem
+  padding-top: 5.7rem
 
 .prod-categories
-  li
-    border-bottom: 0.1rem solid #ededed
-  a
-    display: block
-    font-size: 1.7rem
-    line-height: 1.1
-    color: #979b97
-    padding: 1.2rem 0
-    text-indent: 0.2rem
-    &:hover
-      background-color: rgba(248, 194, 122, 0.2)
+	li
+		border-bottom: 0.1rem solid #ededed
+	a
+		display: block
+		font-size: 1.7rem
+		line-height: 1.1
+		color: #979b97
+		padding: 1rem 0
+		text-indent: 0.2rem
+		&:hover
+			background-color: rgba(248, 194, 122, 0.2)
 
 .contacts
   p
@@ -1099,7 +1123,8 @@ h5
 	
 	
 .footer-nav
-	margin-bottom: 3rem
+	margin: 0
+	padding-bottom: 3.3rem
 	@include lg
 	h3
 		padding: 0
@@ -1134,6 +1159,8 @@ h5
 				float: none
 
 .footer-bottom
+	padding-top: 1.7rem
+	border-top: 0.1rem solid #ededed
 	@include lg
 		ul
 			text-align: center
@@ -1156,6 +1183,7 @@ h5
 		border: 0.3rem solid #ededed
 		width: 100%
 		height: auto
+		max-width: 5.8rem
 	a,
 	span
 		display: block
@@ -1168,9 +1196,9 @@ h5
 			color: #000
 
 .footer-nav
-  h3
-    font-size: 1.6rem
-    margin-bottom: 1.7rem
+	h3
+		font-size: 1.6rem
+		margin-bottom: 1.2rem
 
 .copyrights
   text-align: right
@@ -1197,11 +1225,12 @@ h5
 		align-items: center
 
 .footer-contacts_holder
+	margin-top: 0.7rem
 	p
 		font-size: 1.6rem
 		color: #707170
 		display: block
-		margin-bottom: 1rem
+		margin-bottom: 0.5rem
 
 .active-drop
 .prod-categories,
@@ -1270,7 +1299,7 @@ h5
 .page-top_buttons
 	display: flex
 	align-items: center
-	margin-top: 1.1rem
+	margin-top: 0
 	justify-content: flex-end
 	
 .btn-page-top
@@ -1331,7 +1360,7 @@ h5
 		background-color: transparent
 		border: none
 		position: absolute
-		right: 0
+		right: 1rem
 		top: 50%
 		transform: translateY(-50%)
 	.ico-search
@@ -1357,6 +1386,14 @@ h5
 	@include lg
 		display: block
 
+.recipe-col 
+	padding: 0
+
+.footer-recipe_text
+	padding-top: 0.8rem
+
+.footer-recipe_img
+	padding-left: 0
 
 @import 'category'
 @import 'product-details'

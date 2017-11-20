@@ -11,7 +11,8 @@
   slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
-  autoplay: true,
+  autoplay: false,
+  appendArrows: '.product-slider_arrows',
   prevArrow: '<button class="slick-arrow slick-prev"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
   nextArrow: '<button class="slick-arrow slick-next"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
   responsive: [
@@ -24,7 +25,7 @@
         }
     },
     {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

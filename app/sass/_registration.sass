@@ -13,7 +13,7 @@
 .reg-block_title
 	display: block
 	width: 100%
-	font-weight: 1.5rem
+	font-weight: bold
 	line-height: 4.5rem
 	text-transform: uppercase
 	border-radius: $radius
@@ -21,9 +21,10 @@
 	color: #fff
 	background-color: $blue
 	padding: 0 2.1rem
+	font-size: 1.7rem
+	@include md 
+		font-size: 1.2rem
 
-.nav-container
-	
 .nav-registration-page
 	padding-bottom: 1.2rem
 
@@ -31,9 +32,54 @@
 	.form-field
 		width: 100%
 		max-width: 100%
+	.auth-block_info
+		margin-top: 1.8rem
 
 .reg-block_subtitle
 	display: block
 	color: #725849
 	font-size: 1.5rem
 	margin-bottom: 2.2rem
+
+.auth-notification.notification-registration
+	padding-left: 1.8rem
+
+.reg-form_footer
+	.auth-check_row
+		margin-bottom: 0
+		margin-top: 1.8rem
+		@include md
+			margin-top: 0
+			margin-bottom: 1.8rem
+
+.reg-select_wrap
+	overflow: hidden
+	position: relative
+	cursor: pointer
+	.ico-arrow-client
+		position: absolute
+		right: 2.8rem
+		top: 50%
+		transform: translateY(-100%)
+		&:before
+			color: #727272
+			font-size: 1.5rem
+
+.reg-select_form
+	-webkit-appearance: none
+	width: 100%
+	border: none
+	box-shadow: none
+	background: transparent
+	background-image: none
+	-webkit-appearance: none
+	cursor: pointer
+	border-radius: $radius
+	margin-bottom: 1.4rem
+	border: 0.1rem solid #d2d2d2
+	background-color: transparent
+	line-height: 4.1rem
+	padding: 0 1rem 0 1.7rem
+	font-size: 1.5rem
+	color: $brown
+	width: 100%

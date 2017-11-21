@@ -3,28 +3,59 @@
 	font-size: 1.7rem
 	font-weight: bold
 	text-transform: uppercase
-	padding-top: 2.5rem
-	margin-bottom: 2.7rem
+	margin-bottom: 1rem
 	color: #675751
+	@include md
+		font-size: 1.5rem
+		text-align: center
+		padding-top: 1.4rem
+		margin-bottom: 1.7rem
 
 .category-wrapper
 	background-color: #fff
-	margin-bottom: 6rem
+	padding-bottom: 3rem
+	@include md
+		padding-bottom: 0
+
+.sidebar-links_block
+	padding-top: 1rem
+	padding-bottom: 1.3rem
+	background-color: #f6f6f6
+	border-radius: $radius
+	&.sidebar-block_image
+		padding-left: 1.3rem
+		padding-right: 2rem
+		padding-top: 1.4rem
+	&.sidebar-block_list
+		background-color: #f8f7ee
+		.sidebar-links
+			padding-left: 2.7rem
+			padding-top: 1.4rem
 
 .sidebar-links
-	margin-left: 4.5rem
-	padding-top: 1.9rem
-	padding-bottom: 1.8rem
-	border-bottom: 0.1rem dashed #d1d1d1
+	padding-left: 4.5rem
+	padding-top: 1.7rem
+	padding-bottom: 1.5rem
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 9%
+		width: 18.5rem
+		border-bottom: 0.1rem dashed #d1d1d1
 	&:last-child
 		border: none
+		&:after
+			border-color: transparent
 	a,
 	p
 		display: block
 		position: relative
 		font-size: 1.4rem
+		line-height: 1.25
 		color: #979b97
-		margin-bottom: 0.7rem
+		margin-bottom: 0
 		text-decoration: none
 	a
 		&:hover
@@ -47,11 +78,19 @@
 .sidebar-links_wrap
 	margin-bottom: 2.2rem
 	&.without-heading
+		margin-bottom: 0.9rem
 		.sidebar-links
-			margin-left: 2.5rem
+	@include md
+		&.hide-md
+			display: none
 
 .sidebar-products_wrap
-	margin-bottom: 3rem
+	margin-bottom: 1.2rem
+	&.sidebar-recipe_wrap
+		.sidebar-product_right
+			padding-top: 0
+			display: flex
+			align-items: center
 
 .sidebar-product_img
 	display: block
@@ -64,20 +103,26 @@
 		height: auto
 
 .sidebar-product_block
-	min-height: 8rem
+	min-height: 9rem
 	border-bottom: 0.1rem dashed #d1d1d1
 	display: flex
 	align-items: center
 	justify-content: flex-start
+	padding: 1rem 0
 	&:last-child
 		border: none
 
 .sidebar-product_right
 	max-width: 11.5rem
+	padding-top: 0.8rem
+	@include md
+		padding-top: 0
 
 .sidebar-product_heading
 	display: block
 	font-size: 1.7rem
+	line-height: 1.25
+	margin-bottom: 0.3rem
 	font-weight: bold
 	color: #979b97
 	text-decoration: none
@@ -87,6 +132,12 @@
 		color: #979b97
 		text-decoration: underline
 
+.sidebar-prod_subheading
+	.sidebar-product_heading
+		margin-bottom: 0
+	.sidebar-links_block.sidebar-block_image
+		padding-top: 1.2rem
+	
 .sidebar-product_subheading
 	display: block
 	font-size: 1.4rem
@@ -99,37 +150,54 @@
 	font-size: 1.6rem
 
 .pages-nav
-	margin-bottom: 2rem
+	margin-bottom: 1rem
 	a
 		display: inline-block
 		font-size: 1.5rem
 		color: #a5a6a6
 		&:hover
 			text-decoration: underline
+	@include md
+		display: none
 
-.category-content
-	padding-top: 2.5rem
+.category-content,
+.sidebar_heading
+	padding-top: 2rem
+	padding-left: 0.2rem
+	@include md
+		padding-top: 1rem
+
+.sidebar-holder
+	@include md
+		padding: 0 1.5rem
 
 .category-content_heading
 	display: block
 	font-size: 2.2rem
 	color: $orange
-	margin-bottom: 1.5rem
+	margin-bottom: 1rem
+	@include md
+		font-size: 1.8rem
+		line-height: 1.25
+		margin-bottom: 0.4rem
 
 .category-content_subheading
 	display: block
 	font-size: 1.5rem
 	color: $brown
-	padding-bottom: 2.5rem
+	padding-bottom: 1.9rem
 	border-bottom: 0.1rem dotted #e2e2e2
+	@include md
+		font-size: 1.2rem
+		padding-bottom: 1.4rem
 
 .category-content_products
-	padding-top: 2.5rem
+	padding-top: 2.7rem
 
 .category-content_image
 	overflow: hidden
 	border-radius: $radius
-	margin-bottom: 2.7rem
+	margin-bottom: 2rem
 	max-height: 36rem
 	img
 		width: 100%
@@ -140,13 +208,14 @@
 	color: #5b3042
 	font-size: 3rem
 	font-weight: bold
-	margin-bottom: 2.3rem
+	margin-bottom: 1.2rem
 
 .category-content_paragraph
 	display: block
 	font-size: 1.5rem
+	line-height: 1.25
 	color: #7a7a7a
-	margin-bottom: 2.8rem
+	margin-bottom: 2.4rem
 
 .btn-select
 	color: #fff
@@ -163,6 +232,7 @@
 .sidebar-product_recipe
 	color: #979b97
 	font-size: 1.6rem
+	line-height: 1.1
 	&:hover,
 	&:active,
 	&:focus
@@ -182,6 +252,8 @@
 		font-size: 1.3rem
 		display: inline-block
 		margin-right: 1.5rem
+	@include md
+		display: none
 
 .select-wrap
 	display: inline-block
@@ -193,18 +265,35 @@
 	overflow: hidden
 	position: relative
 	cursor: pointer
+	min-width: 16.5rem
 	&:after
 		content: '\f078'
 		position: absolute
-		right: 5%
+		right: 9%
 		top: 50%
 		transform: translateY(-50%)
 		color: #727272
 		font: normal normal normal 1rem/1 FontAwesome
 
+
+.category-select.mobile
+	display: none
+	.select-wrap
+		min-width: 7rem
+		border: none
+		font-size: 1.1rem
+	@include md
+		display: block
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.category-sort
+		height: auto
+		min-height: 1.4rem 
+
 .category-sort
 	-webkit-appearance: none
-	height: 2.8rem
+	height: 2.5rem
 	padding: 0 3rem 0 1.5rem
 	width: 100%
 	border: none
@@ -217,21 +306,60 @@
 .products-catalog-wrap
 	padding-top: 3.1rem	
 	position: relative
+	@include md
+		padding-top: 0
+
+.mobile-cart
+	@include md
+		padding: 0 0.7rem
+		border-bottom: 0.1rem dotted #e2e2e2
+		&:last-child
+			border-bottom: none
+
+
+.category-wrapper
+	@include md
+		.mobile-cart
+			.product-block
+				width: 10.7rem
+				box-shadow: none
+				justify-content: center
+				.btn-like
+					top: 23%
+					right: 0
+					.icon
+						&:before
+							font-size: 1.8rem
+			.product-block_img
+				width: 10.5rem
+				height: 10.5rem
 
 .product-block
 	display: flex
 	justify-content: flex-end
 	align-items: center
 	flex-direction: column
-	min-height: 25rem
-	box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1)
+	box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15)
 	padding: 3rem 1.5rem
+	position: relative
 	.sale-mark
-		left: 0
+		left: 4%
 		top: 0
 	.btn-like
-		top: 1.5rem
-		right: 1.5rem
+		top: 4%
+		right: 2%
+	@include lg
+		box-shadow: none
+	@include md
+		.sale-mark
+			width: 3.3rem
+			height: 3.3rem
+			left: 0
+			top: 1rem
+			border-width: 0.3em
+			background-color: #fff
+			span
+				font-size: 0.8rem
 	
 
 .product-block_img
@@ -241,35 +369,80 @@
 	img
 		width: 100%
 		height: auto
+		max-width: 23rem
+		margin: 0 auto
+
+.category-row
+	@include md
+		display: flex
+		flex-direction: column-reverse
+
+.category-wrapper
+	.product-block
+		width: auto
+		height: auto
+		padding: 0
+	.product-block_img
+		width: 25rem
+		height: 25rem
 
 .cart-nav_title
 	display: block
 	font-size: 1.6rem
+	line-height: 1.25
+	padding-left: 0.3rem
 	font-weight: bold
 	color: #5b3042
+	@include md
+		font-size: 1.4rem
 
 .cart-nav_weight
 	display: block
 	font-size: 1.5rem
+	line-height: 1.25
+	padding-left: 0.3rem
 	color: #7a7a7a
-	margin-bottom: 1rem
+	margin-bottom: 0.7rem
+	@include md
+		font-size: 1.2rem
 
 .cart-nav_price
 	display: block
-	padding: 1rem 0.5rem
+	padding: 0.6rem 0.5rem
 	text-align: center
 	background-color: #fef5e8
 	font-size: 1.8rem
 	line-height: 1
 	font-weight: bold
 	color: #6c5141
-	margin-bottom: 0.9rem
+	margin-bottom: 0.7rem
 	border-radius: $radius
 	strong
 		font-size: 1.2rem
 
+.mobile-cart
+	@include md
+		.cart-nav_price
+			font-size: 1.4rem
+			padding: 0.4rem 0.5rem
+			margin-bottom: 0.3rem
+		.cart-counter_button
+			width: 2.7rem
+			height: 2.7rem
+		.cart-counter_summ
+			span
+				font-size: 1.4rem
+			i
+				font-size: 0.9rem
+		.btn-purchase
+			min-width: 7.2rem
+			height: 2.7rem
+			.ico-purchase
+				&:before
+					font-size: 1.7rem
+
 .product_cart-nav
-	padding-top: 1.8rem
+	padding-top: 1.4rem
 
 .cart-counter_button
 	display: inline-block
@@ -296,6 +469,8 @@
 	align-items: center
 	flex-grow: 1
 	margin-right: 0.2rem
+	@include md
+		width: 12.5rem
 
 .cart-counter_summ
 	span,
@@ -303,12 +478,17 @@
 		display: block
 		color: #6c5141
 		font-size: 1.8rem
-		line-height: 1.1
+		line-height: 1
 		font-weight: bold
 		font-style: normal
 		text-align: center
 	i
 		font-size: 1.2rem
+	@include md
+		span
+			font-size: 1.4rem
+		i
+			font-size: 0.9rem
 
 .btn-purchase
 	display: inline-block
@@ -328,13 +508,17 @@
 		left: 50%
 		top: 50%
 		transform: translate(-50%, -50%)
-
+	
 .product_cart-nav-row
 	display: flex
 	justify-content: space-between
 
 .product-block_wrap
 	margin-bottom: 3.5rem
+	@include md
+		display: flex
+		flex-direction: row
+		margin-bottom: 2.5rem
 
 .pages-nav_wrap
 	display: flex
@@ -343,7 +527,8 @@
 	padding-bottom: 4rem
 	padding-top: 3rem
 	flex-wrap: wrap
-	@include sm
+	@include md
+		display: none
 		justify-content: center
 		.pages-nav_left
 			margin-bottom: 1.5rem
@@ -383,6 +568,7 @@
 		width: 2.1rem
 		height: 2.9rem
 		text-align: center
+		letter-spacing: 0.1rem
 
 .pages-nav_sort-wrap
 	display: flex
@@ -403,12 +589,12 @@
 	overflow: hidden
 	position: relative
 	cursor: pointer
-	min-width: 7rem
+	min-width: 6.5rem
 	font-weight: bold
 	&:after
 		content: '\f078'
 		position: absolute
-		right: 10%
+		right: 27%
 		top: 50%
 		transform: translateY(-50%)
 		color: #727272
@@ -425,3 +611,15 @@
 	background-image: none
 	-webkit-appearance: none
 	cursor: pointer
+
+.pages-nav_left
+	.pages-nav_text
+		width: auto
+		display: flex
+		align-items: center
+		margin-left: 1.1rem
+		a
+			font-size: 1.2rem
+			line-height: 1.25
+			color: #000
+		

@@ -1,7 +1,8 @@
 .product-details_wrapper
 	background-color: #fff
 	margin-bottom: 6rem
-	padding-bottom: 20rem
+	padding-bottom: 24rem
+	position: relative
 	.product-block_wrap	
 		margin-bottom: 0
 
@@ -9,7 +10,11 @@
 	margin-bottom: 3.5rem
 
 .product-details_content
-	padding-top: 2.5rem
+	padding-top: 3.1rem
+	.pages-nav
+		margin-bottom: 2rem
+	@include md
+		padding-top: 0
 	@include lg
 		margin-bottom: 2.3rem
 
@@ -17,7 +22,6 @@
 	display: block
 	font-size: 2.2rem
 	color: $orange
-	margin-bottom: 0.8rem
 	@include lg
 		font-size: 1.8rem
 
@@ -38,17 +42,22 @@
 	@include lg
 		font-size: 1.5rem
 		margin-bottom: 1.3rem
+	@include md
+		font-size: 1.2rem
 
 .product-content_description
 	display: block
 	font-size: 1.5rem
 	color: #725849
+	max-width: 35rem
 	@include lg
 		font-size: 1.2rem
 		
 
 .product-description
 	padding-top: 0.9rem
+	@include md
+
 
 .product-content_subheading-text
 	display: block
@@ -60,9 +69,38 @@
 	.product-block
 		min-height: 3.4rem
 	.product-block_img
-		width: 32rem
-		height: 32rem
-
+		max-width: 28rem
+		max-height: 28rem
+		img
+			max-width: 100%
+	.product_cart-nav
+		padding-top: 2.2rem
+	.product-description
+		padding-top: 0
+	h3
+		font-size: 1.7rem
+	.product-slider_box
+		margin-bottom: 3.2rem
+	@include md
+		.product-block
+			min-height: 1rem
+			padding: 0
+		.product-block_img
+			max-width: 100%
+			max-height: 100%
+			width: 100%
+			height: auto
+		.cart-nav_price
+			margin-bottom: 0.4rem
+	
+.product-details_content
+	.sale-mark
+		width: 4.7rem
+		height: 4.7rem
+		border-width: 0.5rem
+		span
+			font-size: 1.2rem
+	
 .product-description_counter
 	padding-bottom: 3.2rem
 	@include lg
@@ -72,7 +110,7 @@
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
-	padding-top: 1.6rem
+	padding-top: 1.2rem
 	border-top: 0.1rem solid #ededed
 	@include lg
 		padding-top: 1.1rem
@@ -149,6 +187,7 @@
 	padding: 0.8rem 1.5rem
 	min-width: 18.5rem
 	text-align: center
+
 	&.last-tab
 		background-color: #d1e5e4
 		color: #91acaa
@@ -161,6 +200,8 @@
 		border: none
 		&.last-tab
 			border: none
+	@include md
+		padding: 0.6rem 1.5rem
 
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
@@ -184,21 +225,21 @@
 	border: 0.1rem solid #b4d2d0
 	border-top: none
 	min-height: 45rem
-	padding: 3.5rem 2.9rem
+	padding: 3.3rem 2.9rem 1.2rem
 	@include lg
 		border: none
 
 .tab-content_wrap
-	margin-bottom: 4.7rem
+	margin-bottom: 2.2rem
 	strong,
 	p
 		display: block
 		font-size: 1.5rem
 		color: #6e6e6e
 	p
-		margin-bottom: 2.5rem
+		margin-bottom: 1.7rem
 	strong
-		margin-bottom: 1.4rem
+		margin-bottom: 0.7rem
 		
 .nav-tabs>li
 	@include md
@@ -253,8 +294,9 @@
 .slider-more_wrap
 	h4
 		text-align: center
-		margin-bottom: 2.1rem
+		margin-bottom: 1.7rem
 	.product-slider_wrap
+		padding-bottom: 4rem
 		.ico-slider-arrow
 			&:before
 				content: '\e908'
@@ -262,12 +304,12 @@
 	.product-slider_wrap
 		.slick-next,
 		.slick-prev
-			right: 1.7rem
+			right: 4%
 			top: -4.6rem
 			left: auto
 		.slick-next
 		.slick-prev
-			right: 7%
+			right: 3%
 	@include lg
 		.product-slider_wrap
 			.slick-next,
@@ -279,7 +321,10 @@
 				transform: translateY(-50%) rotate(180deg)
 			.slick-prev
 				right: 4%
-				
+	@include md
+		.product-slider_wrap
+			h3
+				font-size: 1.5rem
 			
 .ricette-section_wrap
 	h3

@@ -746,6 +746,14 @@ h3
 		padding: 0
 		line-height: 0
 		z-index: 100
+		&:hover
+			.icon
+				&:before
+					color: #98bfbc
+		&:active
+			.icon
+				&:before
+					color: #87b4b1
 	.slick-prev
 		left: 0
 		right: auto
@@ -754,15 +762,10 @@ h3
 		left: auto
 		right: 0
 		transform: rotate(0) translateX(65%)
+		-moz-transform: rotate(0) translateX(65%) translateY(-5%)
 	.ico-slider-arrow
 		&:before
 			font-size: 7rem
-		&:hover
-			&:before
-				color: #98bfbc
-		&:active
-			&:before
-				color: #87b4b1
 	@include lg
 		.ico-slider-arrow
 			&:before

@@ -192,14 +192,17 @@
 	overflow: hidden
 	position: relative
 	cursor: pointer
-	&:after
-		content: '\f078'
-		position: absolute
-		right: 0.9rem
-		top: 50%
-		transform: translateY(-50%)
-		color: #727272
-		font: normal normal normal 1rem/1 FontAwesome
+	background-image: url('../img/select-arrow-1.png')
+	background-repeat: no-repeat
+	background-position: 82% 50%
+//	&:after
+//		content: '\f078'
+//		position: absolute
+//		right: 0.9rem
+//		top: 50%
+//		transform: translateY(-50%)
+//		color: #727272
+//		font: normal normal normal 1rem/1 FontAwesome
 
 .order-product_right
 	display: flex
@@ -213,7 +216,7 @@
 		flex-wrap: wrap
 
 .quantity-select
-	-webkit-appearance: none
+	appearance: none
 	height: 3rem
 	padding: 0 1rem
 	width: 100%
@@ -221,7 +224,6 @@
 	box-shadow: none
 	background: transparent
 	background-image: none
-	-webkit-appearance: none
 	cursor: pointer
 	&:focus
 		border-color: #9f9f9f

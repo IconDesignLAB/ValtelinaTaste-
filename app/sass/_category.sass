@@ -16,6 +16,8 @@
 	padding-bottom: 3rem
 	@include md
 		padding-bottom: 0
+		display: flex
+		flex-direction: column-reverse
 
 .sidebar-links_block
 	padding-top: 1rem
@@ -209,6 +211,8 @@
 	font-size: 3rem
 	font-weight: bold
 	margin-bottom: 1.2rem
+	@include md
+		font-size: 2rem
 
 .category-content_paragraph
 	display: block
@@ -446,6 +450,8 @@
 
 .product_cart-nav
 	padding-top: 1.4rem
+	@include sm
+		flex-grow: 1
 
 .cart-counter_button
 	display: inline-block

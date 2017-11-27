@@ -1567,6 +1567,7 @@ h5
 	display: flex
 	flex-direction: column
 	margin-right: 2.5rem
+	display: none
 	img
 		display: inline-block
 		width: 4.1rem
@@ -1587,6 +1588,8 @@ h5
 			background-size: 100% 1px
 			color: #000
 	@include lg
+		display: block
+		display: flex
 		width: 100%
 		margin: 1rem 1.5rem
 
@@ -1595,7 +1598,9 @@ h5
 	&.active
 		display: block
 
-
+.nav-item.nav-desktop
+	@include lg
+		display: none
 
 @import 'category'
 @import 'product-details'

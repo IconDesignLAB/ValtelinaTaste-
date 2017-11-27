@@ -2179,7 +2179,8 @@ h5 {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 2.5rem; }
+  margin-right: 2.5rem;
+  display: none; }
   .nav-item_drop img {
     display: inline-block;
     width: 4.1rem;
@@ -2209,6 +2210,12 @@ h5 {
     color: #000; }
   @media only screen and (max-width: 992px) {
     .nav-item_drop {
+      display: block;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
       width: 100%;
       margin: 1rem 1.5rem; } }
 
@@ -2216,6 +2223,10 @@ h5 {
   display: none; }
   .mobile-nav_drop.active {
     display: block; }
+
+@media only screen and (max-width: 992px) {
+  .nav-item.nav-desktop {
+    display: none; } }
 
 .sidebar_heading {
   display: block;
@@ -4052,6 +4063,9 @@ h5 {
   color: #725849;
   font-size: 1.5rem;
   margin-bottom: 2.7rem; }
+
+.auth-form {
+  overflow: hidden; }
 
 .btn-auth-social {
   display: block;

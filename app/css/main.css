@@ -1943,6 +1943,9 @@ h5 {
   display: inline-block;
   margin: 0 0.1rem; }
 
+.footer-social .icon:before {
+  font-size: 2.5rem; }
+
 @media only screen and (max-width: 768px) {
   .footer-social .icon:before {
     font-size: 2.5rem; } }
@@ -2295,6 +2298,10 @@ h5 {
           -ms-transform: translate(-150%, -60%);
               transform: translate(-150%, -60%); }
 
+@media only screen and (max-width: 992px) {
+  .sidebar-links_block.first {
+    display: none; } }
+
 .sidebar-links_wrap {
   margin-bottom: 2.2rem; }
   .sidebar-links_wrap.without-heading {
@@ -2581,7 +2588,7 @@ h5 {
     .mobile-cart:last-child {
       border-bottom: none; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .category-wrapper {
     display: -webkit-box;
     display: -webkit-flex;

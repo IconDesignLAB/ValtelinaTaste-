@@ -617,6 +617,7 @@ body
 .page-top
 	display: flex
 	align-items: center
+	background-color: #f0f0f0
 
 h3
 	color: #675751
@@ -1476,13 +1477,122 @@ h5
 	@include lg
 		display: block
 
-
-
 .footer-recipe_text
 	padding-top: 0.8rem
 
 .footer-recipe_img
 	padding-left: 0
+
+.nav-drop-links_block
+	padding-top: 1rem
+	padding-bottom: 1.3rem
+	background-color: #f6f6f6
+	border-radius: $radius
+	display: none
+	&.sidebar-block_image
+		padding-left: 1.3rem
+		padding-right: 2rem
+		padding-top: 1.4rem
+	&.sidebar-block_list
+		background-color: #f8f7ee
+		.sidebar-links
+			padding-left: 2.7rem
+			padding-top: 1.4rem
+	@include lg
+		display: block
+
+.nav-drop_links
+	padding-left: 4.5rem
+	padding-top: 1.7rem
+	padding-bottom: 1.5rem
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 9%
+		width: 18.5rem
+		border-bottom: 0.1rem dashed #d1d1d1
+	&:last-child
+		border: none
+		&:after
+			border-color: transparent
+	a,
+	p
+		display: block
+		position: relative
+		font-size: 1.4rem
+		line-height: 1.25
+		color: #979b97
+		margin-bottom: 0
+		text-decoration: none
+	a
+		&:hover
+			text-decoration: underline
+		&.active
+			color: #e38b08
+			font-weight: bold
+	.sidebar-links_header
+		position: relative
+		font-size: 1.8rem
+		&.active
+			color: #e38b08
+		span
+			display: inline-block
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translate(-150%, -60%)
+
+.nav-drop-links_block
+	max-width: 23rem
+	margin-left: 6rem
+	&.without-heading
+		margin-bottom: 0.9rem
+		.sidebar-links
+	@include md
+		&.hide-md
+			display: none
+
+.nav-item_drop-link
+	width: 100%
+	display: flex
+	align-items: center
+	cursor: pointer
+
+.nav-item_drop
+	display: flex
+	flex-direction: column
+	margin-right: 2.5rem
+	img
+		display: inline-block
+		width: 4.1rem
+		height: 4.1rem
+		transition: $slow-transition
+		margin-right: 1.3rem
+	strong
+		display: inline-block
+		text-transform: uppercase
+		font-size: 1.4rem
+		font-family: "MontserratBold"
+		color: #9aa29e
+		background: linear-gradient(to right, #000, #000) no-repeat 50% 100%
+		background-size: 0 0.1rem
+		transition: $transition
+	&:hover
+		strong
+			background-size: 100% 1px
+			color: #000
+	@include lg
+		width: 100%
+		margin: 1rem 1.5rem
+
+.mobile-nav_drop
+	display: none
+	&.active
+		display: block
+
+
 
 @import 'category'
 @import 'product-details'

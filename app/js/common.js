@@ -82,16 +82,22 @@ document.getElementById('footer-nav-4').onclick = function() {
 
 $('.carello, .prod-count').click(function() {
 	$('.cart-block_drop').toggleClass('active');
-})
+});
 $('.btn-mobile-nav').click(function() {
 	$(this).toggleClass('active');
 	$('.main-nav_hide').toggleClass('active');
-})
+});
 
 $('.btn-log-reg.btn-user').click(function() {
 	$(this).toggleClass('active');
 	$('.area-client_drop').toggleClass('active');
-})
+});
+
+$('.nav-item_drop-link').click(function() {
+	$('.mobile-nav_drop').toggleClass('active');
+});
+
+
 
 
 

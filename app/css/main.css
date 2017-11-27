@@ -2322,7 +2322,7 @@ h5 {
               transform: translate(-150%, -60%); }
 
 @media only screen and (max-width: 992px) {
-  .sidebar-links_block.first {
+  .sodebar-links_wrap.first {
     display: none; } }
 
 .sidebar-links_wrap {
